@@ -68,7 +68,7 @@ const ChatRoom = Model.define('chatrooms', {
         type: Sequelize.STRING,
         allowNull: false
     }
-});
+})
 
 // synchronize a file's in-core state with the underlying storage device
 // Sequelize will create this database if doesn't exist already
