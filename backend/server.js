@@ -10,6 +10,16 @@ const bodyParser = require('body-parser');
 
 const app = express();
 
+morgan(function (tokens, req, res) {
+    return [
+      tokens.method(req, res),
+      tokens.url(req, res),
+      tokens.status(req, res),
+      tokens.res(req, res, 'content-length'), '-',
+      tokens['response-time'](req, res), 'ms'
+    ].join(' ')
+})
+
 // PORT for Heroku and Localhost
 
 const _PORT = process.env.PORT || 3000;
@@ -30,14 +40,10 @@ app.use(express.urlencoded({ extended: true }));
 
 */
 
-/* 
+app.use('/api', require('./Controllers/API').route)
 
-    -> API Routes Here <-
-
-*/
-
-app.listen( PORT, () => {
-    console.log(`coneecting to the ${PORT} port`)
+app.listen( _PORT, () => {
+    console.log(`connecting to the ${_PORT} port`)
 })
 
 

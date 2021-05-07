@@ -20,13 +20,14 @@ const Model = new Sequelize(
             max: 10
         }
     }
-)
+);
 
 // Model for Users
 
 const User = Model.define('users', {
     id: {
-        type: Sequelize.UUIDV4,
+        type: Sequelize.INTEGER,
+        autoIncrement: true,
         primaryKey: true
     },
     firstName: {
@@ -49,12 +50,13 @@ const User = Model.define('users', {
 
 const ChatRoom = Model.define('chatrooms', {
     id: {
-        type: DataTypes.UUID,
+        type: Sequelize.INTEGER,
+        autoIncrement: true,
         primaryKey: true
     },
     // FOR THE CLIENT SIDE THIS SHOULD RECEIVE A JSON OBJECT 
     // THAT KEEPS A ARRAY OF THE CHATS
-    room: {
+    posts: {
         type: Sequelize.STRING(65000),
         allowNull: false,
     }, 
@@ -71,7 +73,7 @@ const ChatRoom = Model.define('chatrooms', {
 // synchronize a file's in-core state with the underlying storage device
 // Sequelize will create this database if doesn't exist already
 
-db.sync().then(() => {
+Model.sync().then(() => {
     console.log('Database synced')
 }).catch((err) => {
     console.log(err)
