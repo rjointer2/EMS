@@ -29,7 +29,8 @@ Running the Backend Server
 
 ## Contribute?
 
---> This project is in development <--
+Roosevelt Jointer -> [GitHub](https://github.com/rjointer2)
+Muhammad Tariq -> [Github](https://github.com/mmtariqk)
 
 
 ## Test
@@ -63,7 +64,4 @@ Copyright 2020 Roosevelt Jointer
         
         THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-For more content, check our Github Pages
 -------------------------------------------
-[GitHub](https://github.com/rjointer2) 
-[Github](https://github.com/mmtariqk)!
