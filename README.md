@@ -11,7 +11,7 @@
 
 ## Description
 
-Employee Managemnet System using React, Express, MySQL, Node
+Employee Management System using React, Express, MySQL, Node
 
 ## Install
 
