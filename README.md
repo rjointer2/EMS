@@ -5,7 +5,7 @@
 * [Description](#description)
 * [Install](#install)
 * [Usage](#usage)
-* [Contribute](#contribute)
+* [Contributors](#contributors)
 * [Test](#test)
 * [License](#license)
 
@@ -27,7 +27,7 @@ Running the Backend Server
 -> npm run start:production
 
 
-## Contribute?
+## Contributors
 
 Roosevelt Jointer -> [GitHub](https://github.com/rjointer2)
 
