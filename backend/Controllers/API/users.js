@@ -1,6 +1,10 @@
 
+const jwt = require('jsonwebtoken');
+const bcrypt = require('bcryptjs');
+
 const User = require('../../Schema/schemas').User
 const route = require('express').Router();
+
 
 // To get all users
 
@@ -24,17 +28,51 @@ route.get('/id', (req, res) => {
 
 // To create new user
 
-route.post('/', (req, res) => {
-    User.create({
-        firstname: req.body.firstname,
-        lastname: req.body.lastname,
-        username: req.body.username,
-        password: req.body.password,
-    }).then((user) => {
-        res.status(201).send(user);
-        console.log(user)
-    })
+route.post('/register', async (req, res) => {
+
+    console.log(req.body)
+
+    const { username, password } = req.body
+
+    const hashedPassword = await bcrypt.hash(password, 12)
+        
+    try {
+
+       /*  if(hashedPassword) */
+
+        User.create({
+            firstName: req.body.firstName,
+            lastName: req.body.lastName,
+            username: req.body.username,
+            password: hashedPassword,
+        }).then((user) => {
+            res.status(201).send({
+                Success: 'User created',
+                newUser: user
+            })
+
+            // for loginning 
+
+            /* let passEntered = 'qwerthj'
+            let hashed = '$2a$12$YehFqN3CxdSL7SdubQX.K.R7.aiegfvSpUElhM8O51p3GIN1PLl0a'
+
+            bcrypt.compare(passEntered, hashed, (err, isMatch) => {
+                if (err) {
+                    throw err
+                  } else if (!isMatch) {
+                    console.log("Password doesn't match!")
+                  } else {
+                    console.log("Password matches!")
+                  }
+            }) */
+        })
+        
+    } catch(err) {
+        res.status(404).send({err})
+    }
 });
+
+
 
 // To delete user
 
