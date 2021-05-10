@@ -24,6 +24,7 @@ route.get('/', (req, res) => {
 // To get user by id
 
 route.get('/id', (req, res) => {
+    // findById isn't a fn so we have to find by primary key
     User.findByPk(req.params.id).then((user) => {
         res.status(201).send(user)
     }).catch((err) => {

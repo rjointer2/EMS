@@ -5,6 +5,8 @@ const path = require('path');
 const morgan = require('morgan');
 const express = require('express');
 const bodyParser = require('body-parser');
+const session = require('express-session');
+const { ppid } = require('process');
 
 // Invoked App
 
@@ -30,6 +32,20 @@ const _PORT = process.env.PORT || 3000;
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }));
 
+app.use(session({
+    // session configs
+    secret: 'secret-key',
+    resave: false,
+    // reducing server storage usage, or complying with 
+    // laws that require permission before setting a cookie.
+    saveUninitialized: false
+}))
+
+// application routes 
+
+let viewCount = 0
+
+
 /* 
 
     ========================== FUNCTION HERE SOON ================================
@@ -39,6 +55,8 @@ app.use(express.urlencoded({ extended: true }));
     UNTIL THE BUILD FOLDER IS CREATED AND READY TO SERVE ON THE CLIENT FOLDER
 
 */
+
+app.use('/', require('./Controllers/app'))
 
 app.use('/api', require('./Controllers/API').route)
 
