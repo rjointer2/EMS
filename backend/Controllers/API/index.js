@@ -3,7 +3,7 @@
 
 const route = require('express').Router();
 
-// Routes
+// API Routes
 
 route.use('/users', require('./users'));
 route.use('/chatRooms', require('./chatRooms'));

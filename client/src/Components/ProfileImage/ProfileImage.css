@@ -1,0 +1,27 @@
+
+.Profile_Image {
+    display: flex;
+    justify-content: center;
+    transform: translateX(-2em);
+    padding-top: 2em;
+    padding-bottom: 2em;
+
+}
+
+.background_color {
+    width: 85px;
+    height: 85px;
+    background: white;
+    border-radius: 50%;
+    margin-left: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+}
+
+.Profile_Image > .background_color > img {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+}
