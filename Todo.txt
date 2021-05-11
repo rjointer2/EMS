@@ -8,52 +8,57 @@ Muhammund
 Roosevelt
 JWT AUTH for admin and regular user
 
-due date? Monday & Tuesday
+Due Date Wednesday
 
 
-//
 
-Backend 
+What needs to get done
+---
+Flesh out and styles these pages ** have interface
+
+---
+Dashboard should only accessable to the admin
+-Add, Remove and Update tasks for employees
+
+---
+Edit Profile ** Only Admin can change employees to admin and change their departments
+- update first and last name, username, password, picture
 
 
-Roosevelt
-JWT AUTH for admin and regular user
+-- 
+Task 
+Enable to update task status as completed or not 
 
+--
+LogIn / LogOut
 
+adds user and only user can read, update and remove their stuff
+
+--
 Chat Room Web sockets
+Give yourself a name, Select a room to join etc
+join a room, and pick / type a room to join / redirects them to room
 
 
 
-Frontend
 
-// Super important
+Roosevelt 
 
-// Things to remember and do 
-// When making components -> in the components folder and use the naming convention
-    throughtout the css and js ( for debugging and modularize )
-
-Muhammund 
--> Login Page
--> Logout
-
+Pass JWT as the fornt to receive
+Start a session for logged in users
+log out ends session
+Redux - storing the state of logged in, and logged out
+Log In
+Log Out
+Sidebar hamburger menu for mobile query
 
 
-Home page
+Muhammund
 
-
-Side Bar Menu -> Home ( generic home page ), Empoloyees, Task, Chat Room, Schedule ** Admin has extra link to update, delete and read user
-    Logout -> Logout, 
-    Should link to pages with generic information that applies to that 
-    link
-    Ex: Home link -> Home Page
-    Employees link should have like a random users in a list for the user
-     to see them and etc
-Chat Room -> Give yourself a name, Select a room to join etc
-Admin
-Hire and Fire!
-In their side bar menu, they are given a extra link to fire and hire and edit
-employees, 
-
-ChatRoom -> join a room, and pick / type a room to join / redirects them to room
-
+Front end
+flesh out and give life to the pages 
+- Dashboard
+- Edit Profile
+- Tasks
+- ChatRooms
 

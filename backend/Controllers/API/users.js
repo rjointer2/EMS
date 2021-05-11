@@ -91,7 +91,7 @@ route.post('/register', async (req, res) => {
 
     // We'll destructe this request's body and take the password property
     const { username, password } = req.body
-    // store it in a vaeiable, and await for this action bcasue it is slow
+    // store it in a variable, and await for this action bcasue it is slow
     const hashedPassword = await bcrypt.hash(password, 12)
         
     try {

@@ -45,7 +45,20 @@ const User = Model.define('users', {
     password: {
         type: Sequelize.STRING,
         allowNull: false,
-    }
+    },
+    picture: {
+        type: Sequelize.STRING,
+        allowNull: false,
+    },
+    admin: {
+        type: Sequelize.STRING,
+        allowNull: false,
+    },
+    department: {
+        type: Sequelize.STRING,
+        allowNull: false,
+    },
+
 });
 
 const ChatRoom = Model.define('chatrooms', {
