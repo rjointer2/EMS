@@ -1,7 +1,7 @@
 
 // Global Styles
 import './App.css';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { ThemeProvider } from 'styled-components';
 
 // Components
 
@@ -12,7 +12,8 @@ import SideBar from './Components/Sidebar/Sidebar';
 
 import HomeScreen from './Screens/HomeScreen/HomeScreen';
 
-
+// React Router 
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 
 function App() {
@@ -28,9 +29,23 @@ function App() {
 
         {/* This main div is to flex the screens injected on the right hand on the application */}
         <main>
-          <Switch>
-            <Route exact path="/" component={HomeScreen}/>
-          </Switch>
+          <ThemeProvider>
+            <Switch>
+              <Route exact path="/" component={HomeScreen}/>
+            </Switch>
+            <Switch>
+              <Route exact path="/" component={HomeScreen}/>
+            </Switch>
+            <Switch>
+              <Route exact path="/" component={HomeScreen}/>
+            </Switch>
+            <Switch>
+              <Route exact path="/" component={HomeScreen}/>
+            </Switch>
+            <Switch>
+              <Route exact path="/" component={HomeScreen}/>
+            </Switch>
+          </ThemeProvider>
         </main>
      </Router>
 
