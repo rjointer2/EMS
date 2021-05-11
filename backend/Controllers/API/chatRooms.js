@@ -4,6 +4,7 @@ const route = require('express').Router();
 
 // get all chatrooms
 
+
 route.get('/', (req, res) => {
     ChatRoom.findAll().then((chatrooms) => {
         res.status(201).send(chatrooms)
