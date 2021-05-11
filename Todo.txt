@@ -1,0 +1,59 @@
+
+For right now
+
+Muhammund 
+-> Login Page
+-> Logout
+
+Roosevelt
+JWT AUTH for admin and regular user
+
+due date? Monday & Tuesday
+
+
+//
+
+Backend 
+
+
+Roosevelt
+JWT AUTH for admin and regular user
+
+
+Chat Room Web sockets
+
+
+
+Frontend
+
+// Super important
+
+// Things to remember and do 
+// When making components -> in the components folder and use the naming convention
+    throughtout the css and js ( for debugging and modularize )
+
+Muhammund 
+-> Login Page
+-> Logout
+
+
+
+Home page
+
+
+Side Bar Menu -> Home ( generic home page ), Empoloyees, Task, Chat Room, Schedule ** Admin has extra link to update, delete and read user
+    Logout -> Logout, 
+    Should link to pages with generic information that applies to that 
+    link
+    Ex: Home link -> Home Page
+    Employees link should have like a random users in a list for the user
+     to see them and etc
+Chat Room -> Give yourself a name, Select a room to join etc
+Admin
+Hire and Fire!
+In their side bar menu, they are given a extra link to fire and hire and edit
+employees, 
+
+ChatRoom -> join a room, and pick / type a room to join / redirects them to room
+
+
