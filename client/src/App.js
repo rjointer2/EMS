@@ -28,9 +28,11 @@ function App() {
 
         {/* This main div is to flex the screens injected on the right hand on the application */}
         <main>
-          <ThemeProvider>
+          {/* 
+              These will serve the component, the / should be resevered for the login
+            */}
             <Switch>
-              <Route exact path="/" component={HomeScreen}/>
+              <Route exact path="/home" component={HomeScreen}/>
             </Switch>
             <Switch>
               <Route exact path="/" component={HomeScreen}/>
@@ -44,7 +46,6 @@ function App() {
             <Switch>
               <Route exact path="/" component={HomeScreen}/>
             </Switch>
-          </ThemeProvider>
         </main>
      </Router>
 
@@ -52,3 +53,4 @@ function App() {
   );
 }
 
+export default App

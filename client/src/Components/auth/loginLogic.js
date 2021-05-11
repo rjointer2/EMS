@@ -48,6 +48,8 @@ export default class App extends Component {
 
 /* WE WILL REVIEW */
 
+// WE WON'T BE USING CLASS COMPONENTS
+
 import './App.css';
 import SideBar from './Components/Sidebar/Sidebar';
 
@@ -111,8 +113,4 @@ function App() {
       </div>
     );
   }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 07d7616e01531ec62852fa42a09697295c76fc10
