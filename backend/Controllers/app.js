@@ -1,16 +1,21 @@
 
+
 // Routes
 
 const route = require('express').Router();
 
 // application routes
 
-// THIS WILL SEND THE APPLICATION WHEN THE BUILD IS RAN
+route.get("/", (req, res) => {
+    res.sendFile(path.join(__dirname, "../client/build", "index.html"));
+    
+});
 
-route.get('/', (req, res) => {
-    // THE TOKE HAS TO SENT THROUGH HERE WHEN THE LOGI AUTH SUCCESS 
+
+route.get('/test', (req, res) => {
     req.session.viewCount += 1
     res.send(`You viewed this page ${req.session.viewCount}`)
 })
+  
 
 exports = module.exports = route

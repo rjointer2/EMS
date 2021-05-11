@@ -6,7 +6,6 @@ const morgan = require('morgan');
 const express = require('express');
 const bodyParser = require('body-parser');
 const session = require('express-session');
-const { ppid } = require('process');
 
 // Invoked App
 
@@ -31,6 +30,14 @@ const _PORT = process.env.PORT || 3000;
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }));
+app.use(express.static(path.join(__dirname, '../client/build')));
+
+if(process.env.NODE_ENV === 'production')
+app.use(express.static(path.join(__dirname, "../client/build")));
+
+app.get("/", (req, rep) => {
+  rep.sendFile(path.join(__dirname, "../client/build", "index.html"));
+});
 
 app.use(session({
     // session configs

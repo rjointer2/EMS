@@ -18,12 +18,9 @@ npm i
 
 ## Usage
 
-Running The Client Server
--> cd client
--> In terminal npm run start
+Production Build
 
-Running the Backend Server 
--> npm run start:production
+--> npm runn start:production
 
 
 ## Contributors
