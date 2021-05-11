@@ -8,11 +8,9 @@
 * [Contribute](#contribute)
 * [Test](#test)
 * [License](#license)
-
 ## Description
 
 Employee Management System using React, Express, MySQL, Node
-
 ## Install
 
 --> NO INSTALLTION AT THE MOMENT <--
