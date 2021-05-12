@@ -40,12 +40,7 @@ app.use(session({
 
 // application routes 
 
-let viewCount = 0
-
-
-app.use('/', require('./Controllers/app_routes'))
-
-app.use('/api', require('./Controllers/api_routes').route)
+app.use('/', require('./Controllers/routes').route)
 
 
 app.listen( _PORT, () => {
