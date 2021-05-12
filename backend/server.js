@@ -2,24 +2,13 @@
 // Require Modules 
 
 const path = require('path');
-const morgan = require('morgan');
 const express = require('express');
-const bodyParser = require('body-parser');
 const session = require('express-session');
+const cookieParser = require('cookie-parser');
 
 // Invoked App
 
 const app = express();
-
-morgan(function (tokens, req, res) {
-    return [
-      tokens.method(req, res),
-      tokens.url(req, res),
-      tokens.status(req, res),
-      tokens.res(req, res, 'content-length'), '-',
-      tokens['response-time'](req, res), 'ms'
-    ].join(' ')
-})
 
 // PORT for Heroku and Localhost
 
@@ -31,6 +20,7 @@ const _PORT = process.env.PORT || 3000;
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, '../client/build')));
+app.use(cookieParser())
 
 if(process.env.NODE_ENV === 'production')
 app.use(express.static(path.join(__dirname, "../client/build")));
@@ -53,19 +43,10 @@ app.use(session({
 let viewCount = 0
 
 
-/* 
+app.use('/', require('./Controllers/app_routes'))
 
-    ========================== FUNCTION HERE SOON ================================
-    IF NODE_ENV STRICTLY COMPARED TO production then serve client/build
+app.use('/api', require('./Controllers/api_routes').route)
 
-    FOR RIGHT WE WILL NOT RUN THE APPLICATION TO SERVE OUT FRONT END STATICALLY
-    UNTIL THE BUILD FOLDER IS CREATED AND READY TO SERVE ON THE CLIENT FOLDER
-
-*/
-
-app.use('/', require('./Controllers/app'))
-
-app.use('/api', require('./Controllers/API').route)
 
 app.listen( _PORT, () => {
     console.log(`connecting to the ${_PORT} port`)
