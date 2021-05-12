@@ -1,4 +1,3 @@
-
 // Require Modules 
 
 const path = require('path');
@@ -40,11 +39,14 @@ app.use(session({
 
 // application routes 
 
-app.use('/', require('./Controllers/routes').route)
+let viewCount = 0
+
+
+app.use('/', require('./Controllers/app_routes'))
+
+app.use('/api', require('./Controllers/api_routes').route)
 
 
 app.listen( _PORT, () => {
     console.log(`connecting to the ${_PORT} port`)
 })
-
-
