@@ -9,6 +9,7 @@ import TextAreaFieldGroup from "../common/TextAreaFieldGroupDisplay";
 import { logoutUser } from "../../actions/authActions";
 import SelectListGroupDisplay from "../common/SelectListGroupDisplay";
 import isEmpty from "../../validations/is-empty";
+
 class Dashboard extends Component {
   onLogoutClick(e) {
     e.preventDefault();
