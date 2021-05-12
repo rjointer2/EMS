@@ -13,4 +13,4 @@ route.get('/', (req, res) => {
     res.send(`You viewed this page ${req.session.viewCount}`)
 })
 
-exports = module.exports = route
+exports = module.exports = route;
