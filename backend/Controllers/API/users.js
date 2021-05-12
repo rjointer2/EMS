@@ -1,4 +1,9 @@
 
+// token authiencation functions
+
+const { token, validiateToken } = require('../JWT');
+
+
 // Modules
 
 const jwt = require('jsonwebtoken');
@@ -11,7 +16,6 @@ const route = require('express').Router();
 
 
 // Helper variable to assist with token creation
-const JWT_TOKEN = 'b7cb34f77ddd9628812e15733201236be11fa087da2386eb97e56f58adfb9e602c176dbe370a2091938a151850cdc420a251bb3dec7512fd2189c934c2d93676'
 
 // To get all users
 
@@ -36,7 +40,7 @@ route.get('/id', (req, res) => {
 
 // logging in Client should somehow be auth
 
-route.post('/login', async(req, res) => {
+route.post('/login', async (req, res) => {
 
     const user = await User.findOne({ where: {username: req.body.username} })
 
@@ -44,7 +48,11 @@ route.post('/login', async(req, res) => {
     const passwordEntered = req.body.password
     const hashedPassword = user.password
 
+    // after finding the user then there props id and username to make the token
+
     bcrypt.compare(passwordEntered, hashedPassword, (err, isMatch) => {
+
+        // remember if the user's inputs exist, send an error
 
         if(err) throw err
         if(!isMatch) console.log('Not a match')
@@ -52,42 +60,41 @@ route.post('/login', async(req, res) => {
         // username and password is a match
         if(isMatch) {
             // creates token given payload into a JSON Web Token string payload - Payload to sign
-            const token = jwt.sign({
-                id: user.id, 
-                un: user.username
-            }, JWT_TOKEN);
+            const accessToken = token(user)
+
+            // sends cookies :: yummy
+            // the middleware will validiate if able to go to page
+            res.cookie("access-token", accessToken, {
+                // 1 day til expires
+                maxAge: 60*60*24,
+            })
+
             // We'll send the object with the JWT
             res.status(201).send({
                 Success: 'Logged In!',
                 userData: user,
-                data: token
+                data: accessToken
             })
+
         }
 
     })
 
 });
 
-route.post('/change-password', (req, res) => {
+
+route.get('/user', validiateToken, (req, res) => {
+    res.send('hi')
     
-    // To change password you must have the correct token
-    // we will destructe the token from the request
-
-
-    // Ok so I'll wait for the front to have a login before starting the token auth
-
-    const { token } = req.body
-    const user = jwt.verify(token, JWT_TOKEN);
-
-    console.log(user)
-    res.status(201).send('ok')
-
 })
 
 
 // To create new user
 
 route.post('/register', async (req, res) => {
+
+    // IMPLEMENT THIS BELOW
+    // after registeration, redirects user to log into page 
 
     // We'll destructe this request's body and take the password property
     const { username, password } = req.body
@@ -103,6 +110,11 @@ route.post('/register', async (req, res) => {
             lastName: req.body.lastName,
             username: req.body.username,
             password: hashedPassword,
+            department: req.body.department,
+            picture: req.body.picture,
+            // send bool
+            admin: req.body.admin
+
         }).then((user) => {
             res.status(201).send({
                 Success: 'User created',

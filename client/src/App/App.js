@@ -28,7 +28,14 @@ const App = () => {
 
      <Router>
          {/* TOGGLE HOOK SET HERE FOR MOBILE RESPONSIVENESS */}
-      
+         {/* 
+          Conditionally set if the user is logged display the sidebar, 
+          if not do not display sidebar 
+
+          useState and take the destructed value from the fetch rep and 
+          
+
+        */}
         <SideBar/>
         {/* BACKDROP */}
         {/* SIDEDRAWER */}
