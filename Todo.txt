@@ -44,21 +44,37 @@ join a room, and pick / type a room to join / redirects them to room
 
 Roosevelt 
 
-Pass JWT as the fornt to receive
-Start a session for logged in users
-log out ends session
-Redux - storing the state of logged in, and logged out
-Log In
-Log Out
-Sidebar hamburger menu for mobile query
+
+Front End
+
+-> Tasks
+-> Log In
+-> Log Out
+-> Sidebar hamburger menu for mobile query
+-> Sidebar hamburger menu for mobile query
+
+-> Redux - storing the state of logged in, and logged out
+
+Backend
+-------------------
+
+test the login jwt
+
+DONE Pass JWT as the fornt to receive
+DONE Start a session for logged in users
+DONE log out ends session
+
 
 
 Muhammund
 
-Front end
+Front end interfaces for the data to be displayed
 flesh out and give life to the pages 
-- Dashboard
-- Edit Profile
-- Tasks
-- ChatRooms
+-> Dashboard
+-> Edit Profile
+-> Tasks
+-> ChatRooms
+
+
+
 
