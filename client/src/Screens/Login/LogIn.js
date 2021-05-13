@@ -23,7 +23,9 @@ const LogIn = () => {
                         <LockOutlined/>
                     </Avatar>
                     <br/>
-                    Sign In
+                    <Typography variant="h5">
+                        Sign Up
+                    </Typography>
                 </Grid>
                 <Grid>
                     <TextField label="Username" placeholder="Enter Username" style={basePadding} required />

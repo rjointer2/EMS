@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom"
 
-const { Grid, Paper, Avatar, TextField, Typography, Checkbox, Button } = require("@material-ui/core")
+const { Grid, Paper, Avatar, TextField, Typography, Checkbox, Button, FormControlLabel } = require("@material-ui/core")
 const { ArrowUpwardOutlined } = require("@material-ui/icons")
-const { signUpContainer, signUpInputField } = require("./SignUpStyles")
+const { signUpContainer, signUpInputField, flexItems } = require("./SignUpStyles")
 
 const SignUp = () => {
 
@@ -22,31 +22,34 @@ const SignUp = () => {
             <Paper elevation={10} style={signUpContainer} align="center">
                 {/* Sign Up Badge and Sign Up Message and Sign Up Title*/}
                 <Grid>
-                    <Avatar>
+                    <Avatar style={{backgroundColor: '#2F4050'}}>
                         <ArrowUpwardOutlined/>
                     </Avatar>
+                    <br/>
                     {/* change the text sizes later */}
-                    <Typography>
+                    <Typography variant="h5">
                         Sign Up
                     </Typography>
-                    <Typography>
+                    <Typography style={{fontSize: 12}} >
                         Please fill out the information below.
                     </Typography>
                 </Grid>
                 <Grid>
-                    <TextField label="firstName" placeholder="First Name" style={signUpInputField} required />
-                    <TextField label="lastName" placeholder="Last Name" style={signUpInputField} required />
+                    <TextField label="First Name" placeholder="First Name" style={signUpInputField} required />
+                    <TextField label="Last Name" placeholder="Last Name" style={signUpInputField} required />
                 </Grid>
-                <Grid>
-                    {/* Flex These */}
-                    <Checkbox 
-                        defaultChecked
-                        color="default"
-                        inputProps={{ 'aria-label': 'checkbox with default color' }}
+                <Grid align="center" style={flexItems}>
+                    <FormControlLabel 
+                        control={
+                            <Checkbox
+                               
+                                name="checkBox"
+                                color='primary'
+                            />
+                        }
+                        label="Are You A Manager?"
+                        style={{paddingTop: 10}}
                     />
-                    <Typography>
-                        Are you a Manager?
-                    </Typography>
                 </Grid>
                 <Grid>
                     <TextField label="Username" placeholder="User Name" style={signUpInputField} required />
@@ -57,18 +60,21 @@ const SignUp = () => {
                     <TextField label="Department" placeholder="Add Department Here..." style={signUpInputField} required />
                 </Grid>
                 <Grid>
-                    <Checkbox 
-                        defaultChecked
-                        color="default"
-                        inputProps={{ 'aria-label': 'checkbox with default color' }}
+                    <FormControlLabel 
+                        control={
+                            <Checkbox
+                               
+                                name="checkBox"
+                                color='primary'
+                            />
+                        }
+                        label="Do you argee to the Terms of Service?"
+                        style={{paddingTop: 10}}
                     />
-                    <Typography>
-                        Do you argee to the Terms of Service?
-                    </Typography>
                 </Grid>
-                <Link>
-                    <Button>
-                        Sign Up!
+                <Link align="center">
+                    <Button type="submit" fullWidth variant="contained" style={{backgroundColor: "#2F4050", color: 'white'}}>
+                            Sign In
                     </Button>
                 </Link>
             </Paper>
