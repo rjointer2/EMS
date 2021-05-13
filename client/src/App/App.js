@@ -18,7 +18,6 @@ import DashBoard from '../Screens/DashBoard/DashBoard';
 import ChatRoom from '../Screens/ChatRoom/ChatRoom';
 import Tasks from '../Screens/Tasks/Task';
 import LogIn from '../Screens/Login/LogIn';
-import LogOut from '../Screens/Logout/LogOut';
 import SignUp from '../Screens/SignUp/SignUp';
 
 
@@ -58,10 +57,7 @@ const App = () => {
               <Route exact path="/" component={LogIn}/>
             </Switch>
             <Switch>
-              <Route exact path="/logout" component={LogOut}/>
-            </Switch>
-            <Switch>
-              <Route path="/signup"/>
+              <Route path="/signup" component={SignUp}/>
             </Switch>
         </main>
      </Router>

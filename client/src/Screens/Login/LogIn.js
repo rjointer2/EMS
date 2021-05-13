@@ -22,7 +22,7 @@ const LogIn = () => {
                     </Avatar>
                     <br/>
                     <Typography variant="h5">
-                        Sign Up
+                        Login
                     </Typography>
                 </Grid>
                 <Grid>
@@ -54,7 +54,7 @@ const LogIn = () => {
                             </Link>
                         </Typography>
                         <Typography>
-                            <Link to='/' style={{color: '#2F4050'}}>
+                            <Link to='/signup' style={{color: '#2F4050'}}>
                                 No Login? Sign Up!
                             </Link>
                         </Typography>

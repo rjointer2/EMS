@@ -1,20 +1,11 @@
 import { Link } from "react-router-dom"
+import { basePadding } from "../Login/LogInStyles"
 
 const { Grid, Paper, Avatar, TextField, Typography, Checkbox, Button, FormControlLabel } = require("@material-ui/core")
 const { ArrowUpwardOutlined } = require("@material-ui/icons")
 const { signUpContainer, signUpInputField, flexItems } = require("./SignUpStyles")
 
 const SignUp = () => {
-
-    /* 
-        Sign Up Form
-        _______________________________
-
-        Accept Terms
-
-        Sign Up Button
-        
-    */
 
     return (
         
@@ -77,6 +68,11 @@ const SignUp = () => {
                             Sign In
                     </Button>
                 </Link>
+                <Typography style={signUpInputField}>
+                    <Link to='/' style={{color: '#2F4050'}}  >
+                        Have A Account? Sign In Here!
+                    </Link>
+                </Typography>
             </Paper>
         </Grid>
 
