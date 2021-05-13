@@ -1,11 +1,10 @@
 
 import { useState } from "react";
-import { Link } from "react-router-dom"
-import { basePadding } from "./ForgotLoginStyles";
+import { Link } from "react-router-dom";
 
-const { Grid, Paper, Avatar, TextField, Typography, Checkbox, Button, FormControlLabel } = require("@material-ui/core")
+const { Grid, Paper, Avatar, TextField, Typography, Button } = require("@material-ui/core")
 const { ArrowUpwardOutlined } = require("@material-ui/icons")
-const { ForgotContainer, ForgotInputField, flexItems } = require("./ForgotLoginStyles")
+const { ForgotContainer, ForgotInputField } = require("./ForgotLoginStyles")
 
 const ForgotLogin = () => {
 
@@ -14,12 +13,13 @@ const ForgotLogin = () => {
     const [ lastName, setLastName ] = useState('');
 
     /* function here to handle if the request fails to change */
-
     const [ labelFirstName, setlabelFirstName ] = useState('First Name');
     const [ labelLastName, setlabelLastName ] = useState('Last Name');
 
     // if the request fails we want the user to see why 
     // ex incorrect name, incorrect answer
+
+    const [ link, setLink ] = useState('/forgotlogin')
 
     const requestChangePassword = (state1, state2, fetchedData ) => {
 
@@ -32,21 +32,11 @@ const ForgotLogin = () => {
         state1 !== fetchedData.firstName ? setlabelFirstName('Please Try Again') : setlabelFirstName('First Name');
         state2 !== fetchedData.lastName ? setlabelLastName('Please Try Again') : setlabelLastName('Last Name');
 
-
-
-        // Handle answer here
-        
-        /* 
-
-            if the state === fetchData then ouput reset password page
-
-        */
+        setLink('/changepassword');
 
     }
 
     
-
-
     return (
         
         <Grid >
@@ -79,13 +69,15 @@ const ForgotLogin = () => {
                     </Typography>
                     <TextField label="Answer Here" placeholder="Type In Answer" style={ForgotInputField} required />
                 </Grid>
-                <Button type="submit" fullWidth variant="contained" style={{backgroundColor: "#2F4050", color: 'white'}} onClick={() => {
-                    requestChangePassword(firstName, lastName, {firstName: 'Meg', lastName: 'Bacon'})
-                }}>
-                            Verify information
+                <Link to={link}>
+                    <Button type="submit" fullWidth variant="contained" style={{backgroundColor: "#2F4050", color: 'white'}} onClick={() => {
+                        requestChangePassword(firstName, lastName, {firstName: 'Meg', lastName: 'Bacon'})
+                    }}>
+                        Verify information
                     </Button>
+                </Link>
                 <Typography style={ForgotInputField}>
-                    <Link to='/' style={{color: '#2F4050'}}  >
+                    <Link to='/signup' style={{color: '#2F4050'}}  >
                         Back to Sign In!
                     </Link>
                 </Typography>

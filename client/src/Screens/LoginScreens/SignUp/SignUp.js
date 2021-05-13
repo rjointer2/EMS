@@ -1,5 +1,4 @@
-import { Link } from "react-router-dom"
-import { basePadding } from "../Login/LogInStyles"
+import { Link } from "react-router-dom";
 
 const { Grid, Paper, Avatar, TextField, Typography, Checkbox, Button, FormControlLabel } = require("@material-ui/core")
 const { ArrowUpwardOutlined } = require("@material-ui/icons")

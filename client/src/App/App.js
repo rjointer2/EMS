@@ -20,6 +20,7 @@ import Tasks from '../Screens/Tasks/Task';
 import LogIn from '../Screens/LoginScreens/Login/LogIn';
 import SignUp from '../Screens/LoginScreens/SignUp/SignUp';
 import ForgotLogin from '../Screens/LoginScreens/ForgotLogin/ForgotLogin';
+import ChangeLogin from '../Screens/LoginScreens/ChangeLogin/ChangeLogin';
 
 
 
@@ -54,7 +55,6 @@ const App = () => {
               <Route exact path="/tasks" component={Tasks}/>
             </Switch>
             <Switch>
-              {/* SAVE LOG IN AS SESSION */}
               <Route exact path="/" component={LogIn}/>
             </Switch>
             <Switch>
@@ -62,6 +62,9 @@ const App = () => {
             </Switch>
             <Switch>
               <Route path="/forgotlogin" component={ForgotLogin}/>
+            </Switch>
+            <Switch>
+              <Route path="/changelogin" component={ChangeLogin}/>
             </Switch>
         </main>
      </Router>

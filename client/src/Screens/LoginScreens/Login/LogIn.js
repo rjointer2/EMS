@@ -6,10 +6,11 @@ import { Link } from 'react-router-dom';
 
 // styles
 
-import { basePadding, flexItems, LogInStyles, paddingInput } from './LogInStyles';
+import { basePadding, flexItems, LogInStyles } from './LogInStyles';
 
 const LogIn = () => {
 
+    
     const [ checked, setCheck ] = useState(false)
 
     return (
@@ -49,7 +50,7 @@ const LogIn = () => {
                     />
                     <Grid style={flexItems}>
                         <Typography>
-                            <Link to='/' style={{color: '#2F4050'}}>
+                            <Link to='/forgotlogin' style={{color: '#2F4050'}}>
                                 Forget Password?
                             </Link>
                         </Typography>

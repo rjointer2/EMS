@@ -21,7 +21,8 @@ function Sidebar() {
         (window.location.pathname === '/') || 
         (window.location.pathname === '/signup') || 
         (window.location.pathname === '/logout') || 
-        (window.location.pathname === '/forgotlogin')
+        (window.location.pathname === '/forgotlogin') ||
+        (window.location.pathname === '/changelogin')
     )
 
       // dependents for rerenders
