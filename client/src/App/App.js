@@ -17,8 +17,8 @@ import EditProfile from '../Screens/EditProfile/EditProfile';
 import DashBoard from '../Screens/DashBoard/DashBoard';
 import ChatRoom from '../Screens/ChatRoom/ChatRoom';
 import Tasks from '../Screens/Tasks/Task';
-import LogIn from '../Screens/Login/LogIn';
-import SignUp from '../Screens/SignUp/SignUp';
+import LogIn from '../Screens/LoginScreens/Login/LogIn';
+import SignUp from '../Screens/LoginScreens/SignUp/SignUp';
 
 
 
