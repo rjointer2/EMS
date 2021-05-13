@@ -7,13 +7,9 @@ import {SidebarData} from './SidebarData'
 
 function Sidebar() {
 
+
     return (
-        // container 
-        /* 
-            100vh
-
-        */
-
+        
     <div className="Sidebar_container">
         <div className="Sidebar">
             <ProfileImage />

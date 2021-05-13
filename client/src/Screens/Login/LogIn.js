@@ -12,8 +12,6 @@ const LogIn = () => {
 
     const [ checked, setCheck ] = useState(false)
 
-    console.log(checked)
-
     return (
 
         <Grid>

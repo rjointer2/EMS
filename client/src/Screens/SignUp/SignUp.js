@@ -72,7 +72,7 @@ const SignUp = () => {
                         style={{paddingTop: 10}}
                     />
                 </Grid>
-                <Link align="center">
+                <Link align="center" to='/'>
                     <Button type="submit" fullWidth variant="contained" style={{backgroundColor: "#2F4050", color: 'white'}}>
                             Sign In
                     </Button>
