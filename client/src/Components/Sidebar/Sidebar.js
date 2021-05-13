@@ -16,8 +16,13 @@ function Sidebar() {
 
   useEffect(() => {
 
-      // if url path strictly compares to the following set state to true
-      setToggle((window.location.pathname === '/') || (window.location.pathname === '/signup') || (window.location.pathname === '/logout'))
+    // if url path strictly compares to the following set state to true
+    setToggle( 
+        (window.location.pathname === '/') || 
+        (window.location.pathname === '/signup') || 
+        (window.location.pathname === '/logout') || 
+        (window.location.pathname === '/forgotlogin')
+    )
 
       // dependents for rerenders
   }, [setToggle, toggle])

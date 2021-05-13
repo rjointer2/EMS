@@ -19,6 +19,7 @@ import ChatRoom from '../Screens/ChatRoom/ChatRoom';
 import Tasks from '../Screens/Tasks/Task';
 import LogIn from '../Screens/LoginScreens/Login/LogIn';
 import SignUp from '../Screens/LoginScreens/SignUp/SignUp';
+import ForgotLogin from '../Screens/LoginScreens/ForgotLogin/ForgotLogin';
 
 
 
@@ -58,6 +59,9 @@ const App = () => {
             </Switch>
             <Switch>
               <Route path="/signup" component={SignUp}/>
+            </Switch>
+            <Switch>
+              <Route path="/forgotlogin" component={ForgotLogin}/>
             </Switch>
         </main>
      </Router>
