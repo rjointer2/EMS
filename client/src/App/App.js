@@ -19,8 +19,10 @@ import ChatRoom from '../Screens/ChatRoom/ChatRoom';
 import Tasks from '../Screens/Tasks/Task';
 import LogIn from '../Screens/Login/LogIn';
 import LogOut from '../Screens/Logout/LogOut';
+import SignUp from '../Screens/SignUp/SignUp';
 
 import { useEffect, useState } from 'react';
+
 
 
 const App = () => {
@@ -29,8 +31,9 @@ const App = () => {
 
   const [toggle, setToggle] = useState(true)
 
-  const show = () => { if(window.location.pathname === '/') return setToggle(false) }
+  const show = () => { if( window.location.pathname === '/' || '/signup' || '/logout' ) return setToggle(false) }
   
+  // this rerenders on the path being a signup, login, or logout path in the url
   useEffect(() => { show()}, [toggle])
   console.log(toggle, window.location.pathname )
 
@@ -79,6 +82,9 @@ const App = () => {
             </Switch>
             <Switch>
               <Route exact path="/Logout" component={LogOut}/>
+            </Switch>
+            <Switch>
+              <Route exact path="/SignUp" component={SignUp}/>
             </Switch>
         </main>
      </Router>
