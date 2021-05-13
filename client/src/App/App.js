@@ -21,21 +21,9 @@ import LogIn from '../Screens/Login/LogIn';
 import LogOut from '../Screens/Logout/LogOut';
 import SignUp from '../Screens/SignUp/SignUp';
 
-import { useEffect, useState } from 'react';
 
 
 const App = () => {
-
-  //for toggling the sidebar
-  const [ toggle, setToggle ] = useState(false)
-
-  useEffect(() => {
-
-      // if url path strictly compares to the following set state to true
-      setToggle((window.location.pathname === '/') || (window.location.pathname === '/signup') || (window.location.pathname === '/logout'))
-
-      // dependents for rerenders
-  }, [toggle])
 
   return (
     <div className="App">
@@ -43,7 +31,7 @@ const App = () => {
         {/* BACKDROP */}
         {/* SIDEDRAWER */}
         <div className="menu">
-          { !toggle && <SideBar /> }
+          <SideBar /> 
         </div>
         {/* This main div is to flex the screens injected on the right hand on the application */}
         <main>
@@ -73,7 +61,7 @@ const App = () => {
               <Route exact path="/logout" component={LogOut}/>
             </Switch>
             <Switch>
-              <Route exact path="/signup" component={SignUp}/>
+              <Route path="/signup"/>
             </Switch>
         </main>
      </Router>
