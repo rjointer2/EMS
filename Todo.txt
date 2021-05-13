@@ -57,7 +57,7 @@ Muhammund
 
 Front end
 flesh out and give life to the pages 
-- Dashboard
+- Dashboard (Just Dashboard)
 - Edit Profile
 - Tasks
 - ChatRooms
