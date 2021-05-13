@@ -1,6 +1,6 @@
 
 
-import React from 'react';git 
+import React from 'react';
 import ProfileImage from '../../Components/ProfileImage/ProfileImage';
 import './EditProfile.css';
 

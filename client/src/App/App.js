@@ -20,26 +20,39 @@ import Tasks from '../Screens/Tasks/Task';
 import LogIn from '../Screens/Login/LogIn';
 import LogOut from '../Screens/Logout/LogOut';
 
+import { useEffect, useState } from 'react';
+
 
 const App = () => {
+
+  // pretty brute force solution for right now
+
+  const [toggle, setToggle] = useState(true)
+
+  const show = () => { if(window.location.pathname === '/') return setToggle(false) }
   
+  useEffect(() => { show()}, [toggle])
+  console.log(toggle, window.location.pathname )
+
   return (
     <div className="App">
 
      <Router>
          {/* TOGGLE HOOK SET HERE FOR MOBILE RESPONSIVENESS */}
          {/* 
+
           Conditionally set if the user is logged display the sidebar, 
           if not do not display sidebar 
 
           useState and take the destructed value from the fetch rep and 
-          
-
+    
         */}
-        <SideBar/>
+
         {/* BACKDROP */}
         {/* SIDEDRAWER */}
-
+        <div className="menu">
+          { toggle && <SideBar/> }
+        </div>
         {/* This main div is to flex the screens injected on the right hand on the application */}
         <main>
           {/* 
