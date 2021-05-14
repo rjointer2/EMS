@@ -18,7 +18,7 @@ const LogIn = () => {
     const [ labelFirstName, setlabelFirstName ] = useState('First Name');
     const [ labelLastName, setlabelLastName ] = useState('Last Name');
 
-    const [ checked, setCheck ] = useState(false)
+    const [ checked, setCheck ] = useState(false);
 
     return (
 
