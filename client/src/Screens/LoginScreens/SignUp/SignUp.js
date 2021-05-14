@@ -69,7 +69,7 @@ const SignUp = () => {
                 </Link>
                 <Typography style={signUpInputField}>
                     <Link to='/' style={{color: '#2F4050'}}  >
-                        Have A Account? Sign In Here!
+                        Have a Account? Sign In Here!
                     </Link>
                 </Typography>
             </Paper>

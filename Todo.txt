@@ -50,9 +50,21 @@ Front End
 -> Tasks
 DONE Log In
 DONE Sign Up
--> Forgot Login
+DONE Forgot Login
+DONE Change Login
 -> Sidebar hamburger menu for mobile query
 -> Sidebar hamburger menu for mobile query
+
+-> Front End Login Request
+-> Front End Sign Up Request
+-> Front End Sign In Request
+-> Front End Bad Request Request
+-> Front End 404 Page Request
+
+-> Loading Component
+
+-> Fetch Request Hook
+
 
 -> Redux - storing the state of logged in, and logged out
 

@@ -10,7 +10,14 @@ import { basePadding, flexItems, LogInStyles } from './LogInStyles';
 
 const LogIn = () => {
 
-    
+    // store the value of the text as state
+    const [ firstName, setFirstName ] = useState('');
+    const [ lastName, setLastName ] = useState('');
+
+    /* function here to handle if the request fails to change */
+    const [ labelFirstName, setlabelFirstName ] = useState('First Name');
+    const [ labelLastName, setlabelLastName ] = useState('Last Name');
+
     const [ checked, setCheck ] = useState(false)
 
     return (
@@ -27,8 +34,12 @@ const LogIn = () => {
                     </Typography>
                 </Grid>
                 <Grid>
-                    <TextField label="Username" placeholder="Enter Username" style={basePadding} required />
-                    <TextField label="Password" placeholder="Enter Password" style={basePadding} required />
+                    <TextField label={labelFirstName} placeholder={labelFirstName} style={basePadding} value={firstName} onChange={(e) => {
+                        setFirstName(e.target.value)
+                    }} required />
+                    <TextField label={labelLastName} placeholder={labelLastName} style={basePadding} value={lastName} onChange={(e) => {
+                        setLastName(e.target.value)
+                    }} required />
                 </Grid>
                 <br/>
                 <Button type="submit" fullWidth variant="contained" style={{backgroundColor: "#2F4050", color: 'white'}}>

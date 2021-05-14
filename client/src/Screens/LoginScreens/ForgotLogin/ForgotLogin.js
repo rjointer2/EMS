@@ -32,7 +32,7 @@ const ForgotLogin = () => {
         state1 !== fetchedData.firstName ? setlabelFirstName('Please Try Again') : setlabelFirstName('First Name');
         state2 !== fetchedData.lastName ? setlabelLastName('Please Try Again') : setlabelLastName('Last Name');
 
-        setLink('/changepassword');
+        setLink('/changelogin');
 
     }
 
