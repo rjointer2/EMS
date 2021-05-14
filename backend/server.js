@@ -42,8 +42,7 @@ app.use(session({
 let viewCount = 0
 
 
-app.use('/', require('./Controllers/app_routes'))
-
+app.use('/', require('./Controllers/app_routes'));
 app.use('/api', require('./Controllers/api_routes').route)
 
 

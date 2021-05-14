@@ -48,8 +48,9 @@ Roosevelt
 Front End
 
 -> Tasks
--> Log In
--> Log Out
+DONE Log In
+DONE Sign Up
+-> Forgot Login
 -> Sidebar hamburger menu for mobile query
 -> Sidebar hamburger menu for mobile query
 
@@ -60,6 +61,7 @@ Backend
 
 test the login jwt
 
+-> Add Login Secret Ansers to the the User's Schema
 DONE Pass JWT as the fornt to receive
 DONE Start a session for logged in users
 DONE log out ends session
