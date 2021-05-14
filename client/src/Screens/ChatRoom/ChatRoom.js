@@ -1,13 +1,11 @@
 
-import Button from '../../Components/button/button'
 import React from 'react';
 import './ChatRoom.css';
 
 const ChatRoom = () => {
     return (
         <div>
-            ChatRoom <br></br>
-            <Button />
+            ChatRoom
         </div>
     )
 }

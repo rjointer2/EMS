@@ -8,9 +8,14 @@
 * [Contributors](#contributors)
 * [Test](#test)
 * [License](#license)
+
 ## Description
 
-Employee Management System using React, Express, MySQL, Node
+Employee Management System using MySQL, Express, React, and Node
+
+This is made for managing employee's schedules and task, it's a small simple CRUD application.
+
+Hope you enjoy and leave feedback or use as reference!
 
 ## Install
 
@@ -18,9 +23,16 @@ npm i
 
 ## Usage
 
-Production Build
+Running Build For Production Instruction
 
---> npm runn start:production
+--> cd client
+--> npm run build
+--> cd..
+--> npm run start:production
+
+Post Production Build Instruction
+
+--> npm run start:production
 
 
 ## Contributors

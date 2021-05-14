@@ -58,6 +58,10 @@ const User = Model.define('users', {
         type: Sequelize.STRING,
         allowNull: false,
     },
+    recovery: {
+        type: Sequelize.STRING,
+        allowNull: false,
+    }
 
 });
 

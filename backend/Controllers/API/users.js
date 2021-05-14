@@ -3,7 +3,6 @@
 
 const { token, validiateToken } = require('../JWT');
 
-
 // Modules
 
 const jwt = require('jsonwebtoken');

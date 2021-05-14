@@ -17,29 +17,24 @@ import EditProfile from '../Screens/EditProfile/EditProfile';
 import DashBoard from '../Screens/DashBoard/DashBoard';
 import ChatRoom from '../Screens/ChatRoom/ChatRoom';
 import Tasks from '../Screens/Tasks/Task';
-import LogIn from '../Screens/Login/LogIn';
-import LogOut from '../Screens/Logout/LogOut';
+import LogIn from '../Screens/LoginScreens/Login/LogIn';
+import SignUp from '../Screens/LoginScreens/SignUp/SignUp';
+import ForgotLogin from '../Screens/LoginScreens/ForgotLogin/ForgotLogin';
+import ChangeLogin from '../Screens/LoginScreens/ChangeLogin/ChangeLogin';
+import Logout from '../Screens/LoginScreens/Logout/logout';
+
 
 
 const App = () => {
-  
+
   return (
     <div className="App">
-
      <Router>
-         {/* TOGGLE HOOK SET HERE FOR MOBILE RESPONSIVENESS */}
-         {/* 
-          Conditionally set if the user is logged display the sidebar, 
-          if not do not display sidebar 
-
-          useState and take the destructed value from the fetch rep and 
-          
-
-        */}
-        <SideBar/>
         {/* BACKDROP */}
         {/* SIDEDRAWER */}
-
+        <div className="menu">
+          <SideBar /> 
+        </div>
         {/* This main div is to flex the screens injected on the right hand on the application */}
         <main>
           {/* 
@@ -61,11 +56,19 @@ const App = () => {
               <Route exact path="/tasks" component={Tasks}/>
             </Switch>
             <Switch>
-              {/* SAVE LOG IN AS SESSION */}
               <Route exact path="/" component={LogIn}/>
             </Switch>
             <Switch>
-              <Route exact path="/Logout" component={LogOut}/>
+              <Route path="/signup" component={SignUp}/>
+            </Switch>
+            <Switch>
+              <Route path="/forgotlogin" component={ForgotLogin}/>
+            </Switch>
+            <Switch>
+              <Route path="/changelogin" component={ChangeLogin}/>
+            </Switch>
+            <Switch>
+              <Route path='/logout' component={Logout} />
             </Switch>
         </main>
      </Router>
