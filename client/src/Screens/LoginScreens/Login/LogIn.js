@@ -20,6 +20,49 @@ const LogIn = () => {
 
     const [ checked, setCheck ] = useState(false);
 
+
+
+
+        /* TESTING THE REQ */
+
+
+        const request = async () => {
+             // REMEMBER TO CHANGE THE ROUTE IN THE REACT ROUTER TO HAVE A :username param
+            const res = await fetch(`/api/users/login`, {
+                method: 'POST',
+                mode: 'cors',
+                headers: {
+                    'Content-Type': 'application/json',
+
+                },
+                // Our server will compare user's creds and return a object if successful or
+                // unsuccessful, we will dispatch will this action for our reducer to specify
+                // to the store what happened and how to update the state
+                body: JSON.stringify({username: 'hi', password: 'hi'})
+            })
+
+            console.log(res)
+
+            const data = await res.json();
+
+            return data;
+        };
+
+        request();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     return (
 
         <Grid>
