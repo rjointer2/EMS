@@ -5,10 +5,13 @@ import {
   Select,
   OutlinedInput,
   MenuItem,
-  Button
+  Button,
+  Typography,
+  Title,
 } from "@material-ui/core";
 import { useTheme } from "@material-ui/styles";
 import {
+  Dot,
   ResponsiveContainer,
   ComposedChart,
   AreaChart,
@@ -19,11 +22,11 @@ import {
   Pie,
   Cell,
   YAxis,
-  XAxis,
+  XAxis
 } from "recharts";
 
 // styles
-import useStyles from "./Dashboard";
+import useStyles from "./DashBoardStyles";
 
 const mainChartData = getMainChartData();
 const PieChartData = [
