@@ -26,19 +26,19 @@ const LogIn = () => {
         /* TESTING THE REQ */
 
 
-        const request = async () => {
-             // REMEMBER TO CHANGE THE ROUTE IN THE REACT ROUTER TO HAVE A :username param
+        const request = async (obj) => {
+            // REMEMBER TO CHANGE THE ROUTE IN THE REACT ROUTER TO HAVE A :username param
             const res = await fetch(`/api/users/login`, {
                 method: 'POST',
                 mode: 'cors',
                 headers: {
-                    'Content-Type': 'application/json',
+                    'Content-type': 'application/json'
 
                 },
                 // Our server will compare user's creds and return a object if successful or
                 // unsuccessful, we will dispatch will this action for our reducer to specify
                 // to the store what happened and how to update the state
-                body: JSON.stringify({username: 'hi', password: 'hi'})
+                body: JSON.stringify(obj)
             })
 
             console.log(res)
@@ -48,7 +48,7 @@ const LogIn = () => {
             return data;
         };
 
-        request();
+         request({username: 'hi', password: 'hi'}) 
 
 
 

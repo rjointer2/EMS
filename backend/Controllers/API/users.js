@@ -41,7 +41,12 @@ route.get('/id', (req, res) => {
 
 route.post('/login', async (req, res) => {
 
-    const user = await User.findOne({ where: {username: req.body.username} })
+    console.log('hi!!!')
+
+    const user = await User.findOne({ where: {username: req.body.username} });
+
+    if(!user) console.log('Not found user')
+
 
     // Comparers for the password 
     const passwordEntered = req.body.password
@@ -111,6 +116,7 @@ route.post('/register', async (req, res) => {
             password: hashedPassword,
             department: req.body.department,
             picture: req.body.picture,
+            recovery: req.body.recovery,
             // send bool
             admin: req.body.admin
 
