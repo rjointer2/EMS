@@ -45,7 +45,10 @@ route.post('/login', async (req, res) => {
 
     const user = await User.findOne({ where: {username: req.body.username} });
 
-    if(!user) console.log('Not found user')
+    if(!user) {
+        console.log('Not found')
+        return res.status(404).json('error')
+    }
 
 
     // Comparers for the password 

@@ -32,7 +32,8 @@ const LogIn = () => {
                 method: 'POST',
                 mode: 'cors',
                 headers: {
-                    'Content-type': 'application/json'
+                    'Content-type': 'application/json',
+                    'Accept': 'application/json'
 
                 },
                 // Our server will compare user's creds and return a object if successful or
@@ -41,9 +42,9 @@ const LogIn = () => {
                 body: JSON.stringify(obj)
             })
 
-            console.log(res)
-
             const data = await res.json();
+
+            console.log(data)
 
             return data;
         };
