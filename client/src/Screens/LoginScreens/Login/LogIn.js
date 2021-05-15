@@ -1,8 +1,20 @@
 
 import { Avatar, Button, Checkbox, FormControlLabel, Grid, Paper, TextField, Typography } from '@material-ui/core';
 import { LockOutlined } from '@material-ui/icons'
-import React, { useState } from 'react';
+
+// react hooks and redux tools
+
+import { useState, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux'
+
+// react-router
+
 import { Link } from 'react-router-dom';
+
+// Actions
+
+import { getUserLogin as displayUser } from '../../../Redux/actions/loginActions'
+
 
 // styles
 
@@ -11,57 +23,27 @@ import { basePadding, flexItems, LogInStyles } from './LogInStyles';
 const LogIn = () => {
 
     // store the value of the text as state
-    const [ firstName, setFirstName ] = useState('');
-    const [ lastName, setLastName ] = useState('');
-
-    /* function here to handle if the request fails to change */
-    const [ labelFirstName, setlabelFirstName ] = useState('First Name');
-    const [ labelLastName, setlabelLastName ] = useState('Last Name');
+    const [ usernameValue, setUsername ] = useState('');
+    const [ passwordValue, setPassword ] = useState('');
 
     const [ checked, setCheck ] = useState(false);
 
 
+    const dispatch = useDispatch();
 
+    const getUserLogin = useSelector( state => state.getUserLogin )
+    const { error, loading, userLoggedIn } = getUserLogin;
 
-        /* TESTING THE REQ */
+    const object = {
+        username: usernameValue,
+        password: passwordValue
+    }
 
+    console.log(object)
 
-        const request = async (obj) => {
-            // REMEMBER TO CHANGE THE ROUTE IN THE REACT ROUTER TO HAVE A :username param
-            const res = await fetch(`/api/users/login`, {
-                method: 'POST',
-                mode: 'cors',
-                headers: {
-                    'Content-type': 'application/json',
-                    'Accept': 'application/json'
-
-                },
-                // Our server will compare user's creds and return a object if successful or
-                // unsuccessful, we will dispatch will this action for our reducer to specify
-                // to the store what happened and how to update the state
-                body: JSON.stringify(obj)
-            })
-
-            const data = await res.json();
-
-            console.log(data)
-
-            return data;
-        };
-
-         request({username: 'hi', password: 'hi'}) 
-
-
-
-
-
-
-
-
-
-
-
-
+   /*  useEffect(() => {
+        dispatch(displayUser(object))
+    }, [dispatch]); */
 
 
     return (
@@ -78,15 +60,19 @@ const LogIn = () => {
                     </Typography>
                 </Grid>
                 <Grid>
-                    <TextField label={labelFirstName} placeholder={labelFirstName} style={basePadding} value={firstName} onChange={(e) => {
-                        setFirstName(e.target.value)
+                    <TextField label={'Username'} style={basePadding} value={usernameValue} onChange={(e) => {
+                        setUsername(e.target.value)
                     }} required />
-                    <TextField label={labelLastName} placeholder={labelLastName} style={basePadding} value={lastName} onChange={(e) => {
-                        setLastName(e.target.value)
+                    <TextField label={"Password"} style={basePadding} value={passwordValue} onChange={(e) => {
+                        setPassword(e.target.value)
                     }} required />
                 </Grid>
                 <br/>
-                <Button type="submit" fullWidth variant="contained" style={{backgroundColor: "#2F4050", color: 'white'}}>
+                <Button type="submit" fullWidth variant="contained" style={{backgroundColor: "#2F4050", color: 'white'}}
+                    onClick={() => {
+                        dispatch(displayUser(object))
+                    }}
+                >
                         Sign In
                 </Button>
                 <Grid>
