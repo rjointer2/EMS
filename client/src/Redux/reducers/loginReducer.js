@@ -27,6 +27,11 @@ export const getLoginReducer = ( state = { userLoggedIn: []},  action ) => {
             // from our action function the action's payload return is a user 
             error: action.payload
         }
+        case actionTypes.GET_USER_LOGOUT_REQUEST:
+        return {
+            loading: false,
+            userLoggedIn: []
+        }
 
 
         // If not a user request then the array is not empty object

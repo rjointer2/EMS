@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 
 
@@ -11,27 +11,30 @@ import {SidebarData} from './SidebarData'
 
 function Sidebar() {
 
-  //for toggling the sidebar
-  const [ toggle, setToggle ] = useState(false)
+    const location = useLocation();
+    console.log(location.pathname)
 
-  useEffect(() => {
+    //for toggling the sidebar
+    const [ toggle, setToggle ] = useState(false)
 
-    // if url path strictly compares to the following set state to true
-    setToggle( 
-        (window.location.pathname === '/') || 
-        (window.location.pathname === '/signup') || 
-        (window.location.pathname === '/logout') || 
-        (window.location.pathname === '/forgotlogin') ||
-        (window.location.pathname === '/changelogin')
-    )
+    useEffect(() => {
 
-      // dependents for rerenders
-  }, [setToggle, toggle])
+        // if url path strictly compares to the following set state to true
+        setToggle( 
+            (location.pathname === '/home') || 
+            (location.pathname === '/chatrooms') || 
+            (location.pathname === '/dashboard') || 
+            (location.pathname === '/tasks') ||
+            (location.pathname === '/logout')
+        )
 
-  console.log(toggle)
+        // dependents for rerenders
+    }, [setToggle, toggle])
+
+    console.log(toggle)
 
 
-    return !toggle && <div className="Sidebar_container">
+    return toggle && <div className="Sidebar_container">
             <div className="Sidebar">
             <ProfileImage />
             <ul className="SidebarList"> 
