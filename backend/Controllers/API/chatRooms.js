@@ -7,9 +7,9 @@ const route = require('express').Router();
 
 route.get('/', (req, res) => {
     ChatRoom.findAll().then((chatrooms) => {
-        res.status(201).send(chatrooms)
+        res.status(201).json(chatrooms)
     }).catch((err) => {
-        res.status(500).send({
+        res.status(500).json({
             error: `Can't send chatrooms because ${err}`
         })
     })
@@ -23,9 +23,9 @@ route.post('/', (req, res) => {
         owner: req.body.owner,
         name: req.body.name
     }).then((chatroom) => {
-        res.status(201).send(chatroom)
+        res.status(201).json(chatroom)
     }).catch((err) => {
-        res.status(500).send({
+        res.status(500).json({
             error: `Can't post chatrooms because ${err}`
         })
     })
@@ -35,9 +35,9 @@ route.post('/', (req, res) => {
 
 route.get('/:id', (req, res) => {
     ChatRoom.findByPk(req.params.id).then((chatroom) => {
-        res.status(201).send(chatroom)
+        res.status(201).json(chatroom)
     }).catch((err) => {
-        res.status(404).send({
+        res.status(404).json({
             error: `Can't get chatroom because ${err}`
         })
     })
@@ -48,7 +48,7 @@ route.get('/:id', (req, res) => {
 route.delete('/:id', (req, res) => {
     
     ChatRoom.destroy({ where: { id: req.params.id }});
-    res.status(201).send('deleted user')
+    res.status(201).json('deleted user')
 });
 
 // update chat room name by id 
@@ -56,7 +56,7 @@ route.delete('/:id', (req, res) => {
 route.put('/:id/updateProperty', (req, res) => {
 
     if(req.params.updateProperty === undefined || null || ' ' ) {
-        res.status(400).send({
+        res.status(400).json({
             error: 'check how the request was sent'
         })
     }

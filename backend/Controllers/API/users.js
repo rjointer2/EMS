@@ -20,7 +20,7 @@ const route = require('express').Router();
 
 route.get('/', (req, res) => {
     User.findAll().then((users) => {
-        res.status(201).send(users)
+        res.status(201).json(users)
     })
 });
 
@@ -29,9 +29,9 @@ route.get('/', (req, res) => {
 route.get('/id', (req, res) => {
     // findById isn't a fn so we have to find by primary key
     User.findByPk(req.params.id).then((user) => {
-        res.status(201).send(user)
+        res.status(201).json(user)
     }).catch((err) => {
-        res.status(500).send({
+        res.status(500).json({
             error: err
         })
     })
@@ -47,6 +47,7 @@ route.post('/login', async (req, res) => {
 
     if(!user) {
         console.log('Not found')
+        // fix ALL the send methods in the api routes and reture a parsed json object
         return res.status(404).json('error')
     }
 
@@ -77,7 +78,7 @@ route.post('/login', async (req, res) => {
             })
 
             // We'll send the object with the JWT
-            res.status(201).send({
+            res.status(201).json({
                 Success: 'Logged In!',
                 userData: user,
                 data: accessToken
@@ -91,7 +92,7 @@ route.post('/login', async (req, res) => {
 
 
 route.get('/user', validiateToken, (req, res) => {
-    res.send('hi')
+    res.json('hi')
     
 })
 
@@ -120,18 +121,18 @@ route.post('/register', async (req, res) => {
             department: req.body.department,
             picture: req.body.picture,
             recovery: req.body.recovery,
-            // send bool
+            // json bool
             admin: req.body.admin
 
         }).then((user) => {
-            res.status(201).send({
+            res.status(201).json({
                 Success: 'User created',
                 newUser: user
             })
         })
         
     } catch(err) {
-        res.status(404).send({err})
+        res.status(404).json({err})
     }
 
 });
@@ -144,7 +145,7 @@ route.delete('/:id', (req, res) => {
     User.destory({
         where: { id: req.params.id }
     })
-    res.status(201).send('user delete')
+    res.status(201).json('user delete')
 })
 
 // to update user
@@ -152,27 +153,27 @@ route.delete('/:id', (req, res) => {
 route.put('/:id/updateProperty', (req, res) => {
 
     if( req.params.updateProperty === null || undefined || ' ' ) {
-        res.status(404).send('User must enter info here')
+        res.status(404).json('User must enter info here')
     }
 
     if( req.params.updateProperty === 'firstName') {
         User.update({ firstName: req.body.firstName }, {where: { id: req.params.id } })
-        res.status(201).send('updated firstname');
+        res.status(201).json('updated firstname');
     }
 
     if( req.params.updateProperty === 'lastName') {
         User.update({ lastName: req.body.lastName }, {where: { id: req.params.id } })
-        res.status(201).send('updated lastname')
+        res.status(201).json('updated lastname')
     }
 
     if( req.params.updateProperty === 'username') {
         User.update({ username: req.body.username }, {where: { id: req.params.id } })
-        res.status(201).send('updated username')
+        res.status(201).json('updated username')
     }
 
     if( req.params.updateProperty === 'password') {
         User.update({ password: req.body.password }, {where: { id: req.params.id } })
-        res.status(201).send('updated password')
+        res.status(201).json('updated password')
     }
 
 })
