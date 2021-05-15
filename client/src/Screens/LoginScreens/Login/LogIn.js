@@ -73,7 +73,9 @@ const LogIn = () => {
                         dispatch(displayUser(object))
                     }}
                 >
-                        Sign In
+                        <Link to="/home">
+                            Sign In
+                        </Link>
                 </Button>
                 <Grid>
                     <FormControlLabel 

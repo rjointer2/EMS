@@ -91,7 +91,7 @@ route.post('/login', async (req, res) => {
 });
 
 
-route.get('/user', validiateToken, (req, res) => {
+route.get('/home', validiateToken, (req, res) => {
     res.json('hi')
     
 })
