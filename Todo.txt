@@ -47,23 +47,20 @@ Roosevelt
 
 Front End
 
--> Tasks
-DONE Log In
-DONE Sign Up
-DONE Forgot Login
-DONE Change Login
+-> When access denied send to the login page
+-> When user sends in send state from reducer with array of user
+-> Logout logic
+-> Add sidebar component to Tasks
 -> Sidebar hamburger menu for mobile query
 -> Sidebar hamburger menu for mobile query
-
--> Front End Login Request
--> Front End Sign Up Request
--> Front End Sign In Request
--> Front End Bad Request Request
 -> Front End 404 Page Request
-
 -> Loading Component
-
 -> Fetch Request Hook
+
+-> Dashboard component
+-> Task component
+-> Chatroom component
+-> Edit Profile component
 
 
 -> Redux - storing the state of logged in, and logged out

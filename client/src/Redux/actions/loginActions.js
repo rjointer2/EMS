@@ -35,6 +35,7 @@ export const getUserLogin = (login) => async (dispatch) => {
 
         const data = await res.json();
         console.log(data)
+        localStorage.setItem("apptoken", data.data)
        
         // Now if the request is successful we will tell the store what happened
         // by sending this object 

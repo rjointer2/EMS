@@ -13,7 +13,7 @@ import { Link, useParams } from 'react-router-dom';
 
 // Actions
 
-import { getUserLogin as displayUser } from '../../../Redux/actions/loginActions'
+import { getUserLogin as displayUser } from '../../../Redux/actions/loginActions';
 
 
 // styles
@@ -28,7 +28,7 @@ const LogIn = () => {
 
     const [ checked, setCheck ] = useState(false);
 
-
+    // Dispatch will work with the allActions imported from the actions folder.
     const dispatch = useDispatch();
 
     const getUserLogin = useSelector( state => state.getUserLogin )
@@ -41,9 +41,7 @@ const LogIn = () => {
 
     console.log(object)
 
-   /*  useEffect(() => {
-        dispatch(displayUser(object))
-    }, [dispatch]); */
+
 
 
     return (

@@ -4,6 +4,7 @@ const path = require('path');
 const express = require('express');
 const session = require('express-session');
 const cookieParser = require('cookie-parser');
+const { validiateToken } = require('./Controllers/JWT');
 
 // Invoked App
 
@@ -24,13 +25,10 @@ app.use(cookieParser())
 if(process.env.NODE_ENV === 'production')
 app.use(express.static(path.join(__dirname, "../client/build")));
 
-app.get("/", (req, res) => {
+app.get("*", validiateToken, (req, res) => {
   res.sendFile(path.join(__dirname, "../client/build", "index.html"));
 });
 
-app.get('/home', (req, res) => {
-  res.sendFile(path.join(__dirname, "../client/build", "index.html"));
-})
 
 
 app.use(session({

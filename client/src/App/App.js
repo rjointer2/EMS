@@ -8,7 +8,7 @@ import SideBar from '../Components/Sidebar/Sidebar';
 
 // React Router 
 
-import { BrowserRouter as Router, Switch, Route, useParams } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 // Screens
 

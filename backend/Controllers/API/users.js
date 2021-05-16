@@ -18,10 +18,14 @@ const route = require('express').Router();
 
 // To get all users
 
-route.get('/', (req, res) => {
+route.get('/test', (req, res) => {
     User.findAll().then((users) => {
+        console.log('this is a user ')
         res.status(201).json(users)
     })
+
+
+
 });
 
 // To get user by id
@@ -89,12 +93,6 @@ route.post('/login', async (req, res) => {
     })
 
 });
-
-
-route.get('/home', validiateToken, (req, res) => {
-    res.json('hi')
-    
-})
 
 
 // To create new user

@@ -5,11 +5,17 @@ import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 
 import './Sidebar.css'
 import ProfileImage from '../ProfileImage/ProfileImage';
-import {SidebarData} from './SidebarData'
+import {SidebarData} from './SidebarData';
+
+
+import { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux'
 
 
 
 function Sidebar() {
+
+
 
 
     return (
