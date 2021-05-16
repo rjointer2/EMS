@@ -79,6 +79,8 @@ route.post('/login', async (req, res) => {
             res.cookie("access-token", accessToken, {
                 // 1 day til expires
                 maxAge: 60*60*24,
+                httpOnly: true,
+                
             })
 
             // We'll send the object with the JWT
@@ -93,6 +95,17 @@ route.post('/login', async (req, res) => {
     })
 
 });
+
+route.post('/logout', (req, res) => {
+
+    // rewrite the cookie and set it to expire 1 milisecond
+    res.cookie('access-token', '', {
+        maxAge: 1
+    });
+
+    res.redirect('/');
+
+})
 
 
 // To create new user

@@ -5,8 +5,8 @@ const route = require('express').Router();
 
 // API Routes
 
-route.use('/users', require('./API/Users'));
-route.use('/chatRooms', require('./API/chatRooms'));
+route.use('/users', require('./app/Users'));
+route.use('/chatRooms', require('./app/chatRooms'));
 
 // Application Routes
 

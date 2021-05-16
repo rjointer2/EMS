@@ -35,7 +35,20 @@ function Sidebar() {
                     
                 })}
                 <li className="row">
-                    <Link to="/">
+                    <Link to="/" onClick={() => {
+                        ( () => {
+
+                            fetch('/api/users/logout', { method: 'POST', credentials: 'include' })
+                            
+                
+
+                        })()
+
+                       
+                           
+
+            
+                    }}>
                         {/*  Some logout function */}
                         <div id='icon'><ExitToAppIcon /></div>
                         <div id='title'>Logout</div>

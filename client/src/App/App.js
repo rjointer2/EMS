@@ -21,7 +21,6 @@ import LogIn from '../Screens/LoginScreens/Login/LogIn';
 import SignUp from '../Screens/LoginScreens/SignUp/SignUp';
 import ForgotLogin from '../Screens/LoginScreens/ForgotLogin/ForgotLogin';
 import ChangeLogin from '../Screens/LoginScreens/ChangeLogin/ChangeLogin';
-import Logout from '../Screens/LoginScreens/Logout/logout';
 
 
 
@@ -57,9 +56,6 @@ const App = () => {
           </Switch>
           <Switch>
             <Route path="/changelogin" component={ChangeLogin}/>
-          </Switch>
-          <Switch>
-            <Route path='/logout' component={Logout} />
           </Switch>
      </Router>
 

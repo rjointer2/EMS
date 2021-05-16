@@ -4,7 +4,7 @@ import * as actionTypes from '../constants/loginConstants';
 // the action will be dispatched from the stre 
 // the reducer will take a state that will be an empty array and an action
 
-export const getLoginReducer = ( state = { userLoggedIn: []},  action ) => {
+export const loginRequestReducer = ( state = { userLoggedIn: []},  action ) => {
 
     // checking the actions's request
     switch(action.type){
@@ -27,12 +27,6 @@ export const getLoginReducer = ( state = { userLoggedIn: []},  action ) => {
             // from our action function the action's payload return is a user 
             error: action.payload
         }
-        case actionTypes.GET_USER_LOGOUT_REQUEST:
-        return {
-            loading: false,
-            userLoggedIn: []
-        }
-
 
         // If not a user request then the array is not empty object
         default: 

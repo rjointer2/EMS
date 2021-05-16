@@ -11,7 +11,7 @@ import { composeWithDevTools } from 'redux-devtools-extension';
 
 // rdeducers 
 
-import { getLoginReducer } from './reducers/loginReducer';
+import { loginRequestReducer } from './reducers/loginReducer';
 
 // Our root reducer will hold every child reducer and gather specifed interactions into
 // a SINGLE STATE object
@@ -20,7 +20,7 @@ const reducer = combineReducers({
     // Use Redux DevTools from Chrome Extenision to view Diff and State
     // Child Reducers Here
 
-    getUserLogin: getLoginReducer
+    getUserLogin: loginRequestReducer
 
 });
 

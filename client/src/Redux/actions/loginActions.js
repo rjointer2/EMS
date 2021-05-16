@@ -15,7 +15,7 @@ export const getUserLogin = (login) => async (dispatch) => {
     try {
 
         dispatch({
-            type: actionTypes.GET_USER_LOGIN_REQUEST
+            type: actionTypes.GET_LOGIN_REQUEST
         })
 
         // REMEMBER TO CHANGE THE ROUTE IN THE REACT ROUTER TO HAVE A :username param
@@ -64,7 +64,7 @@ export const getUserLogin = (login) => async (dispatch) => {
 }
 
 export const removeUserLogin = () => (dispatch) => {
-        dispatch({
-            type: actionTypes.GET_USER_LOGOUT_REQUEST
-        })
+    dispatch({
+        type: actionTypes.GET_USER_LOGOUT_REQUEST
+    })
 }
