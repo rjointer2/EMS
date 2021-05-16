@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 
-
+import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 
 import './Sidebar.css'
 import ProfileImage from '../ProfileImage/ProfileImage';
@@ -30,18 +30,11 @@ function Sidebar() {
                 })}
                 <li className="row">
                     <Link to="/">
-
+                        {/*  Some logout function */}
+                        <div id='icon'><ExitToAppIcon /></div>
+                        <div id='title'>Logout</div>
                     </Link>
-                    {/*  
-
-                        {
-    title: "Logout",
-    icon: <ExitToAppIcon />,
-    link: "/", 
- },
-
-                    
-                    */}
+                   
 
                 </li>
             </ul>
