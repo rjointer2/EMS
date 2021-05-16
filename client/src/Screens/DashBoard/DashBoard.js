@@ -22,15 +22,16 @@
 
 */
 
-import React from 'react';
 import './DashBoard.css';
+
+import Sidebar from '../../Components/Sidebar/Sidebar';
 
 const DashBoard = () => {
     return (
 
         <div>
             
-            
+            <Sidebar />
 
         </div>
 

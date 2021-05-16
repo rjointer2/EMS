@@ -32,13 +32,7 @@ export const SidebarData = [
         title: "Chat Room",
         icon: <AssessmentIcon />,
         link: "/chatrooms", 
-     },
-    
-     {
-        title: "Logout",
-        icon: <ExitToAppIcon />,
-        link: "/", 
-     },
+     }
   
      
 ];

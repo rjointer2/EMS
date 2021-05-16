@@ -11,7 +11,6 @@ const HomeScreen = () => {
     return (
         <div>
             <Sidebar /> 
-            {/* store token in local storage */}
 
             Home
         </div>

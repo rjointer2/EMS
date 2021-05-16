@@ -31,47 +31,36 @@ const App = () => {
   return (
     <div className="App">
      <Router>
-        {/* BACKDROP */}
-        {/* SIDEDRAWER */}
-        <div className="menu">
-          <SideBar /> 
-        </div>
-        {/* This main div is to flex the screens injected on the right hand on the application */}
-        <main>
-          {/* 
-              These will serve the component, the / should be resevered for the login
-            */}
-            <Switch>
-              <Route exact path="/home" component={HomeScreen}/>
-            </Switch>
-            <Switch>
-              <Route exact path="/editprofile" component={EditProfile}/>
-            </Switch>
-            <Switch>
-              <Route exact path="/dashboard" component={DashBoard}/>
-            </Switch>
-            <Switch>
-              <Route exact path="/chatrooms" component={ChatRoom}/>
-            </Switch>
-            <Switch>
-              <Route exact path="/tasks" component={Tasks}/>
-            </Switch>
-            <Switch>
-              <Route exact path="/" component={LogIn}/>
-            </Switch>
-            <Switch>
-              <Route path="/signup" component={SignUp}/>
-            </Switch>
-            <Switch>
-              <Route path="/forgotlogin" component={ForgotLogin}/>
-            </Switch>
-            <Switch>
-              <Route path="/changelogin" component={ChangeLogin}/>
-            </Switch>
-            <Switch>
-              <Route path='/logout' component={Logout} />
-            </Switch>
-        </main>
+        <Switch>
+            <Route exact path="/home" component={HomeScreen}/>
+          </Switch>
+          <Switch>
+            <Route exact path="/editprofile" component={EditProfile}/>
+          </Switch>
+          <Switch>
+            <Route exact path="/dashboard" component={DashBoard}/>
+          </Switch>
+          <Switch>
+            <Route exact path="/chatrooms" component={ChatRoom}/>
+          </Switch>
+          <Switch>
+            <Route exact path="/tasks" component={Tasks}/>
+          </Switch>
+          <Switch>
+            <Route exact path="/" component={LogIn}/>
+          </Switch>
+          <Switch>
+            <Route path="/signup" component={SignUp}/>
+          </Switch>
+          <Switch>
+            <Route path="/forgotlogin" component={ForgotLogin}/>
+          </Switch>
+          <Switch>
+            <Route path="/changelogin" component={ChangeLogin}/>
+          </Switch>
+          <Switch>
+            <Route path='/logout' component={Logout} />
+          </Switch>
      </Router>
 
     </div>
