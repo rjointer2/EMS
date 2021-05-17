@@ -13,7 +13,6 @@ const home_screen_main = {
     width: '100vw'
 }
 
-
 exports = module.exports = {
     home_screen_main,
 

@@ -1,10 +1,12 @@
 
 import React from 'react';
+import Sidebar from '../../Components/Sidebar/Sidebar';
 import './Tasks.css';
 
 const Tasks = () => {
     return (
-        <div style={{display: 'flex', flexDirection: 'row'}}>
+        <div>
+            <Sidebar />
             Tasks
         </div>
     )

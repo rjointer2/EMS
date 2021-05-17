@@ -22,16 +22,33 @@
 
 */
 
+import { Container, Grid, Paper } from '@material-ui/core';
 import Sidebar from '../../Components/Sidebar/Sidebar';
 import './DashBoard.css';
 
 const DashBoard = () => {
+
+
+
+
+
     return (
 
         <div>
             
             <Sidebar />
-            dashboard
+           
+            <Container>
+
+                <Paper>
+
+                    
+
+                </Paper>
+
+            </Container>
+
+
         </div>
 
     )
