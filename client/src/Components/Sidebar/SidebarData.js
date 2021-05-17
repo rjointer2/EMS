@@ -14,9 +14,9 @@ export const SidebarData = [
        link: "/home", 
     },
     {
-        title: "Dashboard",
+        title: "Schedule",
         icon: <DashboardIcon />,
-        link: "/dashboard", 
+        link: "/schedule", 
      },
      {
         title: "Edit Profile",
@@ -24,9 +24,9 @@ export const SidebarData = [
         link: "/editprofile", 
      },
      {
-        title: "Tasks",
+        title: "Shifts",
         icon: <BusinessIcon />,
-        link: "/tasks", 
+        link: "/Shifts", 
      },
      {
         title: "Chat Room",
