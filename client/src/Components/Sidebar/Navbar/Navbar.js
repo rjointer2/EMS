@@ -3,7 +3,7 @@ import './Navbar.css';
 import { Link } from 'react-router-dom';
 import { MenuList } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
-import { SidebarData } from '../SideBarData';
+import { SidebarData } from '../SidebarData';
 
 const Navbar = ({click}) => {
     return (

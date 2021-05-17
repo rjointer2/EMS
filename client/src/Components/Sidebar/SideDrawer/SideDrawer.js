@@ -1,7 +1,9 @@
 
+import React from 'react'
 
+import { SidebarData } from '../SidebarData';
 import './SideDrawer.css';
-import { SidebarData } from '../SideBarData'
+
 
 import { Link } from 'react-router-dom'
 import ProfileImage from '../../ProfileImage/ProfileImage';
