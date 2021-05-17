@@ -74,69 +74,93 @@ const HomeScreen = () => {
             <Sidebar />
                 {/* Title and backgorund photo */}
 
-                <Toolbar>
-                    <Typography variant="h6" color="primary">
-                        Home
-                    </Typography>
-                </Toolbar>
+               
 
                 <Box style={home_screen_main}>
-                    <Typography>
-                        Management Stories
+                    <Typography variant='h3'>
+                       Welcome Back, {'User!'}
                     </Typography>
                 </Box>
 
                 <Container maxWidth='lg' style={{paddingTop: '3em'}} >
 
-                    <Typography variant='h4' style={{paddingBottom: '3em'}}>
+                    <Typography variant='h4' style={{paddingBottom: '.8em'}}>
                         What's New
+                    </Typography>
+
+                    <Typography style={{paddingBottom: '2em', fontSize: '.8em'}}>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                     </Typography>
 
                     {/* Stories */}
 
                     <Grid container spacing={3}>
-                        
+
                     <Grid item xs={12} sm={6} md={4}>
                         <Card className={classes.root}>
                             <CardContent>
                                 <Typography className={classes.title} color="textSecondary" gutterBottom>
-                                Word of the Day
+                                Lorem Ispum
                                 </Typography>
                                 <Typography variant="h5" component="h2">
-                                be{bull}nev{bull}o{bull}lent
+                                Consectueur elit
                                 </Typography>
                                 <Typography className={classes.pos} color="textSecondary">
-                                adjective
+                                Lorem...
                                 </Typography>
                                 <Typography variant="body2" component="p">
-                                well meaning and kindly.
+                                Massa enim nec dui nunc mattis enim ut tellus. Ac tortor dignissim convallis aenean et.  
                                 <br />
-                                {'"a benevolent smile"'}
+                                
                                 </Typography>
                             </CardContent>
                             <CardActions>
                                 <Button size="small">Learn More</Button>
                             </CardActions>
                         </Card>
-                        </Grid>
+                    </Grid>
+                        
+                    <Grid item xs={12} sm={6} md={4}>
+                        <Card className={classes.root}>
+                            <CardContent>
+                                <Typography className={classes.title} color="textSecondary" gutterBottom>
+                                Lorem Ispum
+                                </Typography>
+                                <Typography variant="h5" component="h2">
+                                Consectueur elit
+                                </Typography>
+                                <Typography className={classes.pos} color="textSecondary">
+                                Lorem...
+                                </Typography>
+                                <Typography variant="body2" component="p">
+                                Massa enim nec dui nunc mattis enim ut tellus. Ac tortor dignissim convallis aenean et.  
+                                <br />
+                                
+                                </Typography>
+                            </CardContent>
+                            <CardActions>
+                                <Button size="small">Learn More</Button>
+                            </CardActions>
+                        </Card>
+                    </Grid>
 
                         <Grid item xs={12} sm={6} md={4}>
 
                             <Card className={classes.root}>
                                 <CardContent>
                                     <Typography className={classes.title} color="textSecondary" gutterBottom>
-                                    Word of the Day
+                                    Lorem Ispum
                                     </Typography>
                                     <Typography variant="h5" component="h2">
-                                    be{bull}nev{bull}o{bull}lent
+                                    Consectueur elit
                                     </Typography>
                                     <Typography className={classes.pos} color="textSecondary">
-                                    adjective
+                                    Lorem...
                                     </Typography>
                                     <Typography variant="body2" component="p">
-                                    well meaning and kindly.
+                                    Massa enim nec dui nunc mattis enim ut tellus. Ac tortor dignissim convallis aenean et.  
                                     <br />
-                                    {'"a benevolent smile"'}
+                                    
                                     </Typography>
                                 </CardContent>
                                 <CardActions>
@@ -151,18 +175,18 @@ const HomeScreen = () => {
                             <Card className={classes.root}>
                                 <CardContent>
                                     <Typography className={classes.title} color="textSecondary" gutterBottom>
-                                    Word of the Day
+                                    Lorem Ispum
                                     </Typography>
                                     <Typography variant="h5" component="h2">
-                                    be{bull}nev{bull}o{bull}lent
+                                    Consectueur elit
                                     </Typography>
                                     <Typography className={classes.pos} color="textSecondary">
-                                    adjective
+                                    Lorem...
                                     </Typography>
                                     <Typography variant="body2" component="p">
-                                    well meaning and kindly.
+                                    Massa enim nec dui nunc mattis enim ut tellus. Ac tortor dignissim convallis aenean et.  
                                     <br />
-                                    {'"a benevolent smile"'}
+                                    
                                     </Typography>
                                 </CardContent>
                                 <CardActions>
