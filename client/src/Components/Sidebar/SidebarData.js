@@ -1,4 +1,4 @@
-import React from 'react'
+
 import HomeIcon from '@material-ui/icons/Home';
 import BusinessIcon from '@material-ui/icons/Business';
 import EventIcon from '@material-ui/icons/Event';
@@ -42,7 +42,3 @@ export const SidebarData = [
   
      
 ];
-
-
-
-
