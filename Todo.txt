@@ -48,11 +48,6 @@ Roosevelt
 Front End
 
 -> When access denied send to the login page
--> When user sends in send state from reducer with array of user
--> Logout logic
--> Add sidebar component to Tasks
--> Sidebar hamburger menu for mobile query
--> Sidebar hamburger menu for mobile query
 -> Front End 404 Page Request
 -> Loading Component
 -> Fetch Request Hook
@@ -64,17 +59,12 @@ Front End
 
 
 -> Redux - storing the state of logged in, and logged out
+-> Refetch user in every compoenet
 
 Backend
 -------------------
 
-test the login jwt
-
--> Add Login Secret Ansers to the the User's Schema
-DONE Pass JWT as the fornt to receive
-DONE Start a session for logged in users
-DONE log out ends session
-
+chatroom socket 
 
 
 Muhammund
