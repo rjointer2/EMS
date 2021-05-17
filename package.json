@@ -2,7 +2,7 @@
   "name": "EMS",
   "version": "1.0.0",
   "description": "<!-- click each bullet to move to the associated section -->\r * [Description](#description)\r * [Install](#install)\r * [Usage](#usage)\r * [Contribute](#contribute)\r * [Test](#test)\r * [License](#license)",
-  "main": "index.js",
+  "main": "backend/server.js",
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run start:production",
     "start:production": "cd backend && npm start",
