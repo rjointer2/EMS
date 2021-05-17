@@ -3,13 +3,14 @@
 
 import HomeScreen from '../Screens/HomeScreen/HomeScreen';
 import EditProfile from '../Screens/EditProfile/EditProfile';
-import DashBoard from '../Screens/DashBoard/DashBoard';
+import Schedule from '../Screens/Schedule/Schedule'
 import ChatRoom from '../Screens/ChatRoom/ChatRoom';
 import Tasks from '../Screens/Tasks/Task';
 import LogIn from '../Screens/LoginScreens/Login/LogIn';
 import SignUp from '../Screens/LoginScreens/SignUp/SignUp';
 import ForgotLogin from '../Screens/LoginScreens/ForgotLogin/ForgotLogin';
 import ChangeLogin from '../Screens/LoginScreens/ChangeLogin/ChangeLogin';
+
 
 // Global Styles
 
@@ -19,7 +20,6 @@ import './App.css';
 // React Router 
 
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-
 
 
 
@@ -36,7 +36,7 @@ const App = () => {
             <Route exact path="/editprofile" component={EditProfile}/>
           </Switch>
           <Switch>
-            <Route exact path="/dashboard" component={DashBoard}/>
+            <Route exact path="/schedule" component={Schedule}/>
           </Switch>
           <Switch>
             <Route exact path="/chatrooms" component={ChatRoom}/>
