@@ -1,67 +1,27 @@
-import React from 'react'
-import { Link } from 'react-router-dom';
 
-import ExitToAppIcon from '@material-ui/icons/ExitToApp';
+import { useState } from 'react'
 
-import './Sidebar.css'
-import ProfileImage from '../ProfileImage/ProfileImage';
-import {SidebarData} from './SidebarData';
+// imports 
 
+import Navbar from './Navbar/Navbar';
+import SideDrawer from './SideDrawer/SideDrawer';
+import Backdrop from './Backdrop/Backdrop';
 
-import { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux'
+const Sidebar = () => {
 
-
-
-function Sidebar() {
-
-
-
+    // if the state is false then the side bar doesn't show
+    const [sideToggle, setSideToggle] = useState(false);
 
     return (
-        <div className="Sidebar_container">
-            <div className="Sidebar">
-            <ProfileImage />
-            <ul className="SidebarList"> 
-                {SidebarData.map((val, key)=> {
-                return (
-                    <li key={key} className="row" > 
-                        <Link to={val.link}>
-                            <div id="icon">{val.icon}</div> 
-                            <div id="title">{val.title}</div>
-                        </Link>
-                    </li>
-                );
-                    
-                })}
-                <li className="row">
-                    <Link to="/" onClick={() => {
-                        ( () => {
+        <div>
 
-                            fetch('/api/users/logout', { method: 'POST', credentials: 'include' })
-                            
-                
+        <Navbar click={() => setSideToggle(true)}/>
+        <SideDrawer show={sideToggle}/>
+        <Backdrop show={sideToggle} click={() => setSideToggle(false)}/>
 
-                        })()
-
-                       
-                           
-
-            
-                    }}>
-                        {/*  Some logout function */}
-                        <div id='icon'><ExitToAppIcon /></div>
-                        <div id='title'>Logout</div>
-                    </Link>
-                   
-
-                </li>
-            </ul>
-        </div>     
-    </div>  
+        </div>
     )
-    
-    
+
 }
 
-export default Sidebar;
+export default Sidebar

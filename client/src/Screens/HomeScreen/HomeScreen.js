@@ -1,11 +1,15 @@
 
-import Sidebar from '../../Components/Sidebar/Sidebar';
-import './HomeScreen.css';
+import { home_screen_main } from './HomeScreenStyle.js';
+import sidebar from '../../Components/Sidebar/Sidebar'
+
 
 import { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux'
 
 import { getUserLogin as displayUser } from '../../Redux/actions/loginActions';
+import { Box, Card, Container, Toolbar, Typography, Grid} from '@material-ui/core';
+import Sidebar from '../../Components/Sidebar/Sidebar';
+
 
 
 const HomeScreen = () => {
@@ -20,7 +24,7 @@ const HomeScreen = () => {
         dispatch(displayUser({username: 'tom'}))
     }) */
 
-    useEffect(() => {
+    /* useEffect(() => {
         (async () => {
 
             const res = await fetch('/api/users/test', {
@@ -36,17 +40,62 @@ const HomeScreen = () => {
 
             console.log(data)
         })()
-    })
+    }) */
 
     return (
         <div>
-            <Sidebar /> 
-            Home
+            <Sidebar />
+                {/* Title and backgorund photo */}
 
-            {/* TESTING IF THE HOME STAYS LOGGED OUT AFTER LOGGING */}
+                <Toolbar>
+                    <Typography variant="h6" color="primary">
+                        Home
+                    </Typography>
+                </Toolbar>
 
+                <Box style={home_screen_main}>
+                    <Typography>
+                        Management Stories
+                    </Typography>
+                </Box>
 
+                <Container maxWidth='lg' style={{paddingTop: '3em'}} >
 
+                    <Typography variant='h4' style={{paddingBottom: '3em'}}>
+                        What's New
+                    </Typography>
+
+                    {/* Stories */}
+
+                    <Grid container spacing={3}>
+                        
+                        <Grid item xs={12} sm={6} md={4}>
+                            <Card>
+                                Something Cool
+                            </Card>
+                        </Grid>
+
+                        <Grid item xs={12} sm={6} md={4}>
+                            <Card>
+                                Something Cool
+                            </Card>
+                        </Grid>
+
+                        <Grid item xs={12} sm={6} md={4}>
+                            <Card>
+                                Something Cool
+                            </Card>
+                        </Grid>
+
+                        <Grid item xs={12} sm={6} md={4}>
+                            <Card>
+                                Something Cool
+                            </Card>
+                        </Grid>
+
+                    </Grid>
+
+            </Container>
         </div>
     )
 }

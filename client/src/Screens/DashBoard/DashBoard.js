@@ -22,9 +22,8 @@
 
 */
 
-import './DashBoard.css';
-
 import Sidebar from '../../Components/Sidebar/Sidebar';
+import './DashBoard.css';
 
 const DashBoard = () => {
     return (
@@ -32,7 +31,7 @@ const DashBoard = () => {
         <div>
             
             <Sidebar />
-
+            dashboard
         </div>
 
     )

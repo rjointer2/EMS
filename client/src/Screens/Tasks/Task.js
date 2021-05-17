@@ -4,7 +4,7 @@ import './Tasks.css';
 
 const Tasks = () => {
     return (
-        <div>
+        <div style={{display: 'flex', flexDirection: 'row'}}>
             Tasks
         </div>
     )

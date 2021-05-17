@@ -3,11 +3,12 @@
 import React from 'react';
 import ProfileImage from '../../Components/ProfileImage/ProfileImage';
 import Sidebar from '../../Components/Sidebar/Sidebar';
+
 import './EditProfile.css';
 
 const EditProfile = () => {
     return (
-        <div>
+        <div >
             <Sidebar />
         </div>
     )

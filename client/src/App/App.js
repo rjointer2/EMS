@@ -1,15 +1,4 @@
 
-import './App.css';
-
-// Components
-
-import SideBar from '../Components/Sidebar/Sidebar';
-
-
-// React Router 
-
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-
 // Screens
 
 import HomeScreen from '../Screens/HomeScreen/HomeScreen';
@@ -21,6 +10,16 @@ import LogIn from '../Screens/LoginScreens/Login/LogIn';
 import SignUp from '../Screens/LoginScreens/SignUp/SignUp';
 import ForgotLogin from '../Screens/LoginScreens/ForgotLogin/ForgotLogin';
 import ChangeLogin from '../Screens/LoginScreens/ChangeLogin/ChangeLogin';
+
+// Global Styles
+
+import './App.css';
+
+
+// React Router 
+
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+
 
 
 
