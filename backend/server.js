@@ -21,7 +21,7 @@ app.use(session({
   // reducing server storage usage, or complying with 
   // laws that require permission before setting a cookie.
   saveUninitialized: false,
-}))
+}));
 
 // middleware that only parses json 
 // and only looks at requests where the Content-Type header matches the type option
