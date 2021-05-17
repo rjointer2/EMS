@@ -24,7 +24,9 @@
   },
   "homepage": "https://github.com/rjointer2/EMS#readme",
   "dependencies": {
-    "concurrently": "^6.0.2",
     "if-env": "^1.0.4"
+  },
+  "devDependencies": {
+    "concurrently": "^6.1.0"
   }
 }
