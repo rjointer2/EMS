@@ -1,16 +1,54 @@
 
 
-import { Container, Grid, Paper, TextField, Typography } from '@material-ui/core';
+import { Container, Grid, makeStyles, Paper, TextField, Typography, Avatar, Card, } from '@material-ui/core';
 import { useState } from 'react';
 import Sidebar from '../../Components/Sidebar/Sidebar';
+import PersonAddIcon from '@material-ui/icons/PersonAdd';
 import './DashBoardStyle.js';
 import { DashBoardChild, FlexUserTable } from './DashBoardStyle.js';
 
 const DashBoard = () => {
 
-    // blank form object to be out base state
+    const useStyles = makeStyles(theme => ({
 
-    const initialState = {
+        root: {
+            '& .FormContainer-root': {
+                width: '80%',
+                margin: theme.spacing(1)
+            }
+        },
+        NewEmployeeHeader: {
+            padding: theme.spacing(4),
+            display: 'flex',
+            marginBottom: theme.spacing(3)
+        },
+        NewEmployeeForm: {
+            margin: theme.spacing(3),
+            padding: theme.spacing(3)
+        },
+        NewEmployeeInput: {
+            margin: 5
+        }
+
+    }));
+
+    const classes = useStyles()
+
+    const newEmployeeState = {
+        firstName: '',
+        lastName: '',
+        username: '',
+        password: '',
+        department: '',
+        picture: '',
+        recovery: '',
+        admin: ''
+    }
+
+
+    // blank form object to be out base state to the user
+
+    const ExistingEmployeeState = {
         firstName: '',
         lastName: '',
         department: '',
@@ -40,29 +78,45 @@ const DashBoard = () => {
                     Admin Dashbard 
                 </Typography>
 
-                <Typography align="center" style={{
-                    fontSize: '.8em',
-                }}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Malesuada fames ac turpis egestas sed tempus urna et. Massa enim nec dui nunc mattis enim ut tellus. Augue lacus viverra vitae congue eu consequat ac. 
-                    <br/><br/>
-                    Magna fringilla urna porttitor rhoncus dolor purus non enim praesent. Volutpat lacus laoreet non curabitur gravida arcu ac tortor dignissim. Vestibulum lectus mauris ultrices eros in cursus turpis. Non arcu risus quis varius quam quisque id diam vel. Massa placerat duis ultricies lacus sed turpis tincidunt id. 
-                </Typography>
+                <div>
 
 
-                <form>
-
-                    <Grid container>
-                        <Grid item xs={6}>
-                            <TextField variant="outlined" label="First Name" value={value.firstName}/>
-                            <TextField variant="outlined" label="Last Name" value={value.lastname}/>
-                            <TextField variant="outlined" label="Picture" value={value.picture}/>
-                            <TextField variant="outlined" label="Department" value={value.department}/>
-                            <TextField variant="outlined" label="Recovery" value={value.recovery}/>
+            <Paper elevation={0} square>    
+                <div className={classes.NewEmployeeHeader}>
+                    <Card style={{padding: '1em', display: 'flex', alignItems: 'center'}}>
+                        <Avatar style={{marginRight: '1em'}}>
+                            <PersonAddIcon />
+                        </Avatar>
+                        <Grid>
+                        Add New Employee<br/>
+                        <div style={{fontSize: '10px'}}>
+                            Click here when complete
+                        </div>
+                        
                         </Grid>
-                        <Grid item xs={6}></Grid>
+                    </Card>
+                </div>
+            </Paper>
+
+            <Paper className={classes.NewEmployeeForm}>
+                <form className={classes.root}>
+
+                <Grid container>
+                    <Grid item xs={12}>
+                        <TextField variant="outlined" label="First Name" value={value.firstName} className={classes.NewEmployeeInput}/>
+                        <TextField variant="outlined" label="Last Name" value={value.lastname} className={classes.NewEmployeeInput}/>
+                        <TextField variant="outlined" label="Username" value={value.username} className={classes.NewEmployeeInput}/>
+                        <TextField variant="outlined" label="Password" value={value.password} className={classes.NewEmployeeInput}/>
+                        <TextField variant="outlined" label="Department" value={value.department} className={classes.NewEmployeeInput}/>
+                        <TextField variant="outlined" label="Recovery" value={value.recovery} className={classes.NewEmployeeInput}/>
                     </Grid>
+                    <Grid item xs={6}></Grid>
+                </Grid>
 
                 </form>
+            </Paper>
+        </div>
+                
 
 
                 {/* Just use flex box row */}
