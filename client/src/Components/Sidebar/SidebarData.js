@@ -1,4 +1,4 @@
-import React from 'react'
+
 import HomeIcon from '@material-ui/icons/Home';
 import BusinessIcon from '@material-ui/icons/Business';
 import EventIcon from '@material-ui/icons/Event';
@@ -14,9 +14,9 @@ export const SidebarData = [
        link: "/home", 
     },
     {
-        title: "Dashboard",
+        title: "Schedule",
         icon: <DashboardIcon />,
-        link: "/dashboard", 
+        link: "/schedule", 
      },
      {
         title: "Edit Profile",
@@ -24,9 +24,9 @@ export const SidebarData = [
         link: "/editprofile", 
      },
      {
-        title: "Tasks",
+        title: "Shifts",
         icon: <BusinessIcon />,
-        link: "/tasks", 
+        link: "/Shifts", 
      },
      {
         title: "Chat Room",
@@ -37,12 +37,8 @@ export const SidebarData = [
      {
         title: "Logout",
         icon: <ExitToAppIcon />,
-        link: "/", 
+        link: "/logout", 
      },
   
      
 ];
-
-
-
-

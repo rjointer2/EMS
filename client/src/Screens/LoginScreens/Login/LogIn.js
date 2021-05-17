@@ -1,8 +1,20 @@
 
 import { Avatar, Button, Checkbox, FormControlLabel, Grid, Paper, TextField, Typography } from '@material-ui/core';
 import { LockOutlined } from '@material-ui/icons'
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+
+// react hooks and redux tools
+
+import { useState, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux'
+
+// react-router
+
+import { Link, useParams } from 'react-router-dom';
+
+// Actions
+
+import { getUserLogin as displayUser } from '../../../Redux/actions/loginActions';
+
 
 // styles
 
@@ -11,14 +23,26 @@ import { basePadding, flexItems, LogInStyles } from './LogInStyles';
 const LogIn = () => {
 
     // store the value of the text as state
-    const [ firstName, setFirstName ] = useState('');
-    const [ lastName, setLastName ] = useState('');
-
-    /* function here to handle if the request fails to change */
-    const [ labelFirstName, setlabelFirstName ] = useState('First Name');
-    const [ labelLastName, setlabelLastName ] = useState('Last Name');
+    const [ usernameValue, setUsername ] = useState('');
+    const [ passwordValue, setPassword ] = useState('');
 
     const [ checked, setCheck ] = useState(false);
+
+    // Dispatch will work with the allActions imported from the actions folder.
+    const dispatch = useDispatch();
+
+    const getUserLogin = useSelector( state => state.getUserLogin )
+    const { error, loading, userLoggedIn } = getUserLogin;
+
+    const object = {
+        username: usernameValue,
+        password: passwordValue
+    }
+
+    console.log(object)
+
+
+
 
     return (
 
@@ -34,16 +58,22 @@ const LogIn = () => {
                     </Typography>
                 </Grid>
                 <Grid>
-                    <TextField label={labelFirstName} placeholder={labelFirstName} style={basePadding} value={firstName} onChange={(e) => {
-                        setFirstName(e.target.value)
+                    <TextField label={'Username'} style={basePadding} value={usernameValue} onChange={(e) => {
+                        setUsername(e.target.value)
                     }} required />
-                    <TextField label={labelLastName} placeholder={labelLastName} style={basePadding} value={lastName} onChange={(e) => {
-                        setLastName(e.target.value)
+                    <TextField label={"Password"} style={basePadding} value={passwordValue} onChange={(e) => {
+                        setPassword(e.target.value)
                     }} required />
                 </Grid>
                 <br/>
-                <Button type="submit" fullWidth variant="contained" style={{backgroundColor: "#2F4050", color: 'white'}}>
-                        Sign In
+                <Button type="submit" fullWidth variant="contained" style={{backgroundColor: "#2F4050", color: 'white'}}
+                    onClick={() => {
+                        dispatch(displayUser(object))
+                    }}
+                >
+                        <Link to="/home">
+                            Sign In
+                        </Link>
                 </Button>
                 <Grid>
                     <FormControlLabel 

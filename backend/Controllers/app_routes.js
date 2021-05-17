@@ -3,13 +3,14 @@
 
 const route = require('express').Router();
 
-// application routes
+// API Routes
 
-route.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, "../client/build", "index.html"));
-});
+route.use('/users', require('./app/Users'));
+route.use('/chatRooms', require('./app/chatRooms'));
+
+// Application Routes
 
 
-
-
-exports = module.exports = route
+exports = module.exports = {
+    route
+}

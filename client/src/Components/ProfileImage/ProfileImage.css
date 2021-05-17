@@ -2,16 +2,15 @@
 .Profile_Image {
     display: flex;
     justify-content: center;
-    transform: translateX(-2em);
     padding-top: 2em;
     padding-bottom: 2em;
 
 }
 
 .background_color {
-    width: 85px;
-    height: 85px;
-    background: white;
+    width: 90px;
+    height: 90px;
+    background: #2F4050;;
     border-radius: 50%;
     margin-left: 8px;
     display: flex;
