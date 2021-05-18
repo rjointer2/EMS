@@ -60,9 +60,3 @@ export const getUserLogin = (login) => async (dispatch) => {
 
     }
 }
-
-export const removeUserLogin = () => (dispatch) => {
-    dispatch({
-        type: actionTypes.GET_USER_LOGOUT_REQUEST
-    })
-}

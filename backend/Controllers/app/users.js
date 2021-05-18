@@ -18,11 +18,21 @@ const route = require('express').Router();
 
 // To get all users
 
-route.get('/test', (req, res) => {
-    User.findAll().then((users) => {
-        console.log('this is a user ')
-        res.status(201).json(users)
+route.get('/authUser', (req, res) => {
+    
+    // This will be for the redux store to use for the 
+    // read the user's jwt, which is protected ny httpOnly
+    // and never sent to the client
+
+    User.findByPk(authID).then((user) => {
+        console.log(user)
+        res.status(201).json(user)
+    }).catch((err) => {
+        res.status(500).json({
+            error: err
+        })
     })
+    
 
 
 
@@ -56,6 +66,13 @@ route.post('/login', async (req, res) => {
         return res.status(404).json('error')
     }
 
+    // auth helper function <- this will pass our user object to the authUser route
+    // we will store only the id for extra safetly
+
+    authID = user.id
+
+    console.log(authID + '  test')
+
 
     // Comparers for the password 
     const passwordEntered = req.body.password
@@ -81,8 +98,8 @@ route.post('/login', async (req, res) => {
             // the middleware will validiate if able to go to page
             res.cookie("access-token", accessToken, {
                 // 1 day til expires
-                maxAge: 60*60*24
-                
+                maxAge: 60*60*24,
+                httpOnly: true
             })
 
             // We'll send the object with the JWT
@@ -193,6 +210,8 @@ route.put('/:id/updateProperty', (req, res) => {
         res.status(201).json('updated password')
     }
 
-})
+});
+
+
 
 exports = module.exports = route

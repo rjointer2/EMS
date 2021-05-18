@@ -60,6 +60,10 @@ app.get("/tasks", validiateToken, (req, res) => {
   res.sendFile(path.join(__dirname, "../client/build", "index.html"));
 });
 
+app.get("/schedule", validiateToken, (req, res) => {
+  res.sendFile(path.join(__dirname, "../client/build", "index.html"));
+});
+
 
 // application routes 
 
