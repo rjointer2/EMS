@@ -87,21 +87,5 @@ flesh out and give life to the pages
 -> ChatRooms
 
 
-let initValue = {
-        firstName: '',
-        lastName: '',
-        username: '',
-        password: '',
-        picture: '',
-        department: '',
-        admin: '',
-        schedule: [],
-        recovery: {
-            question: '',
-            answer: '',
-        },
-        status: true,
-        workSettings: []
 
-    }
 
