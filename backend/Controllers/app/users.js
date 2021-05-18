@@ -131,6 +131,8 @@ route.post('/logout', (req, res) => {
 
 route.post('/register', async (req, res) => {
 
+    /* WE SHOULD ADD A 500 IS THE SERVER DOESN'T CATCH THE REQUEST */
+
     // IMPLEMENT THIS BELOW
     // after registeration, redirects user to log into page 
 

@@ -102,17 +102,18 @@ const ChatRoom = Model.define('chatrooms', {
     }
 })
 
-const Tasks = Model.define('tasks', {
+const Shift = Model.define('shifts', {
+
     id: {
         type: Sequelize.INTEGER,
-        autoIncrement: true,
+        allowNull: false,
         primaryKey: true
     },
-    department: {
+    timeSchedule: {
         type: Sequelize.STRING,
         allowNull: false
     },
-    timeSchedule: {
+    request: {
         type: Sequelize.STRING,
         allowNull: false
     },
@@ -121,6 +122,10 @@ const Tasks = Model.define('tasks', {
         allowNull: false
     },
     status: {
+        type: Sequelize.STRING,
+        allowNull: false
+    },
+    employeeID: {
         type: Sequelize.STRING,
         allowNull: false
     }
@@ -137,5 +142,5 @@ Model.sync().then(() => {
 });
 
 exports = module.exports = {
-    User, ChatRoom
+    User, ChatRoom, Shift
 }
