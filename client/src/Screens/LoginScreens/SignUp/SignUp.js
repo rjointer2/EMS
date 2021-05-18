@@ -1,13 +1,20 @@
 
-import { useState } from "react";
 import { Link } from "react-router-dom";
+
+// Hooks
+
+import { useState } from "react";
 import useFormState from "../../../Hooks/useFormState";
 
+// Styles
+
 const { Grid, Paper, Avatar, TextField, Typography, Checkbox, Button, FormControlLabel, InputLabel, Select, MenuItem, makeStyles, Modal } = require("@material-ui/core")
-const { ArrowUpwardOutlined } = require("@material-ui/icons")
-const { signUpContainer, signUpInputField, flexItems } = require("./SignUpStyles")
+const { ArrowUpwardOutlined } = require("@material-ui/icons");
+const { signUpContainer, signUpInputField, flexItems } = require("./SignUpStyles");
 
 const SignUp = () => {
+
+    // randomly put the modal on the screen
 
     function rand() {
         return Math.round(Math.random() * 20) - 10;
@@ -93,8 +100,59 @@ const SignUp = () => {
         }
 
         console.log('passed');
+        registerUser({
+            firstName: firstName,
+            lastName: lastName,
+            username: username,
+            password: password,
+            picture: '',
+            department: department,
+            admin: admin,
+            schedule: [],
+            recovery: {
+                question: 'What is your first name?',
+                answer: 'reset',
+            },
+            // we are just sending this to the schema to must the row is fulfilled
+            status: true,
+            workSettings: []
+        })
         window.location.replace('/')
+    }
 
+
+    /* 
+    
+        POST Request
+    
+    */
+
+    const registerUser = async (sendRequestObject) => {
+        
+        try{
+
+            const res = await fetch(`/app/users/register`,  {
+                method: 'POST',
+                mode: 'cors',
+                headers: {
+                    'Content-type': 'application/json',
+                    'Accept': 'application/json'
+        
+                },
+                body: JSON.stringify(sendRequestObject)
+            });
+    
+            // ON success this function is invoked in the vadiate function
+
+            const data = await res.json();
+    
+            return data
+
+        } catch(err) {
+            return {
+                error: 'Failed to sign up, please try again'
+            }
+        }
     }
 
     return (
