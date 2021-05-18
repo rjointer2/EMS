@@ -24,7 +24,11 @@ npm i
 
 ## Usage
 
-Running Build For Production Instruction
+Fresh Clone / Pull 
+ 
+-> npm i
+
+Instructions after Development -> Production
 
 --> cd client
 --> npm run build
@@ -35,9 +39,11 @@ Post Production Build Instruction
 
 --> npm run start:production
 
+
+
 ## Application
 
-Deployed at -> [Heroku](https://employeemanagerucb.herokuapp.com/)
+Deployed at -> [Heroku](https://employeemanagerucb.herokuapp.com/);
 
 
 ## Contributors
