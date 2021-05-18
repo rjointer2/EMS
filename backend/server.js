@@ -4,7 +4,7 @@ const path = require('path');
 const express = require('express');
 const session = require('express-session');
 const cookieParser = require('cookie-parser');
-const { validiateToken } = require('./Controllers/JWT');
+const { validiateToken } = require('./Controllers/ulit/JWT');
 
 // Invoked App
 
@@ -67,7 +67,7 @@ let viewCount = 0
 
 
 
-app.use('/api', require('./Controllers/app_routes').route)
+app.use('/app', require('./Controllers/app_routes').route)
 
 
 app.listen( _PORT, () => {

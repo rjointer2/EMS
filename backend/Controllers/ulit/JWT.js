@@ -1,9 +1,6 @@
 
 const { sign, verify } = require('jsonwebtoken');
 
-const app = require('express')();
-
-
 // destructure the fn sign and verify from jwt
 // use sign method to make a token from the username and password from the req body
 

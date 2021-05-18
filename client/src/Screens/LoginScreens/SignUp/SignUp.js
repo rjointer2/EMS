@@ -108,14 +108,11 @@ const SignUp = () => {
             picture: '',
             department: department,
             admin: admin,
-            schedule: [],
-            recovery: {
-                question: 'What is your first name?',
-                answer: 'reset',
-            },
+            schedule: JSON.stringify([]),
+            recovery: JSON.stringify(['What is your first name?', 'reset']),
             // we are just sending this to the schema to must the row is fulfilled
             status: true,
-            workSettings: []
+            workSettings: JSON.stringify([])
         })
         window.location.replace('/')
     }

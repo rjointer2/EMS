@@ -1,7 +1,7 @@
 
 // token authiencation functions
 
-const { token, validiateToken } = require('../JWT');
+const { token } = require('../ulit/JWT');
 
 // Modules
 
@@ -49,6 +49,7 @@ route.post('/login', async (req, res) => {
 
     const user = await User.findOne({ where: {username: req.body.username} });
 
+
     if(!user) {
         console.log('Not found')
         // fix ALL the send methods in the api routes and reture a parsed json object
@@ -74,12 +75,13 @@ route.post('/login', async (req, res) => {
             // creates token given payload into a JSON Web Token string payload - Payload to sign
             const accessToken = token(user)
 
+            console.log(accessToken)
+
             // sends cookies :: yummy
             // the middleware will validiate if able to go to page
             res.cookie("access-token", accessToken, {
                 // 1 day til expires
-                maxAge: 60*60*24,
-                httpOnly: true,
+                maxAge: 60*60*24
                 
             })
 
@@ -133,7 +135,11 @@ route.post('/register', async (req, res) => {
             picture: req.body.picture,
             recovery: req.body.recovery,
             // json bool
-            admin: req.body.admin
+            admin: req.body.admin,
+            schedule: req.body.schedule,
+            recovery: req.body.recovery,
+            status: req.body.status,
+            workSettings: req.body.workSettings,
 
         }).then((user) => {
             res.status(201).json({

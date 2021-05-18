@@ -19,7 +19,7 @@ export const getUserLogin = (login) => async (dispatch) => {
         })
 
         // REMEMBER TO CHANGE THE ROUTE IN THE REACT ROUTER TO HAVE A :username param
-        const res = await fetch(`/api/users/login`, {
+        const res = await fetch(`/app/users/login`, {
             method: 'POST',
             mode: 'cors',
             headers: {
