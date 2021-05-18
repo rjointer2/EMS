@@ -1,7 +1,7 @@
 
 const signUpContainer = {
     padding: 20,
-    height: '120vh',
+    height: '140vh',
     width: 400,
     margin: '100px auto',
     paddingTop: 80

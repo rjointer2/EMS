@@ -1,9 +1,14 @@
-
+// Styles
 import './Navbar.css';
-import { Link } from 'react-router-dom';
-import { MenuList } from '@material-ui/core';
-import MenuIcon from '@material-ui/icons/Menu';
+
+// Array of links
+
 import { SidebarData } from '../SidebarData';
+
+import { Link } from 'react-router-dom';
+
+import MenuIcon from '@material-ui/icons/Menu';
+
 
 const Navbar = ({click}) => {
     return (

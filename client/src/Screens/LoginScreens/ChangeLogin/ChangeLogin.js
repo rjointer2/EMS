@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-import { flexItems, ChangeInput, ChangeContainer } from './ChangeLoginStyle';
+import { ChangeInput, ChangeContainer } from './ChangeLoginStyle';
 
 const { Grid, Paper, Avatar, TextField, Typography, Button } = require("@material-ui/core")
 const { ArrowUpwardOutlined } = require("@material-ui/icons")

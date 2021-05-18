@@ -48,20 +48,35 @@ const User = Model.define('users', {
     },
     picture: {
         type: Sequelize.STRING,
-        allowNull: false,
+        allowNull: true,
     },
     admin: {
         type: Sequelize.STRING,
         allowNull: false,
     },
     department: {
+        // make a object with question and answer
         type: Sequelize.STRING,
         allowNull: false,
     },
     recovery: {
         type: Sequelize.STRING,
         allowNull: false,
+    },
+    schedule: {
+        // an array of object of day and time properties
+        type: Sequelize.STRING,
+        allowNull: true,
+    },
+    status: {
+        type: Sequelize.STRING,
+        allowNull: true,
+    },
+    workSettings: {
+        type: Sequelize.STRING,
+        allowNull: true,
     }
+    
 
 });
 
@@ -82,6 +97,30 @@ const ChatRoom = Model.define('chatrooms', {
         allowNull: false
     }, 
     name: {
+        type: Sequelize.STRING,
+        allowNull: false
+    }
+})
+
+const Tasks = Model.define('tasks', {
+    id: {
+        type: Sequelize.INTEGER,
+        autoIncrement: true,
+        primaryKey: true
+    },
+    department: {
+        type: Sequelize.STRING,
+        allowNull: false
+    },
+    timeSchedule: {
+        type: Sequelize.STRING,
+        allowNull: false
+    },
+    comments: {
+        type: Sequelize.STRING,
+        allowNull: false
+    },
+    status: {
         type: Sequelize.STRING,
         allowNull: false
     }

@@ -1,6 +1,5 @@
 
 import Sidebar from '../../Components/Sidebar/Sidebar';
-import PersonAddIcon from '@material-ui/icons/PersonAdd';
 
 import { makeStyles } from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
@@ -67,7 +66,7 @@ const AdminDashBoard = () => {
                         <TableCell align="right">
                             <SettingsIcon/>
                         </TableCell>
-                        <TableCell align="right">{12}pm => {8}pm</TableCell>
+                        <TableCell align="right">{12}pm {8}pm</TableCell>
                         <TableCell align="right">Pending</TableCell>
                         <TableCell align="right">Scheduled</TableCell>
                         </TableRow>

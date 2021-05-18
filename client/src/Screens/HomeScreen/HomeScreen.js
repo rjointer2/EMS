@@ -5,14 +5,14 @@ import CardContent from '@material-ui/core/CardContent';
 import Button from '@material-ui/core/Button';
 
 import { home_screen_main } from './HomeScreenStyle.js';
-import sidebar from '../../Components/Sidebar/Sidebar'
+/* import sidebar from '../../Components/Sidebar/Sidebar'
 
 
 import { useState, useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux' */
 
-import { getUserLogin as displayUser } from '../../Redux/actions/loginActions';
-import { Box, Card, Container, Toolbar, Typography, Grid} from '@material-ui/core';
+/* import { getUserLogin as displayUser } from '../../Redux/actions/loginActions'; */
+import { Box, Card, Container, Typography, Grid} from '@material-ui/core';
 import Sidebar from '../../Components/Sidebar/Sidebar';
 
 
@@ -67,8 +67,7 @@ const HomeScreen = () => {
       });
 
       const classes = useStyles();
-    const bull = <span className={classes.bullet}>•</span>;
-
+      
     return (
         <div>
             <Sidebar />
