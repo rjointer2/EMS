@@ -2,7 +2,7 @@
 import Sidebar from '../../Components/Sidebar/Sidebar';
 import PersonAddIcon from '@material-ui/icons/PersonAdd';
 
-import { makeStyles, ThemeProvider } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import Table from '@material-ui/core/Table';
 import TableBody from '@material-ui/core/TableBody';
 import TableCell from '@material-ui/core/TableCell';
@@ -44,7 +44,7 @@ const AdminDashBoard = () => {
     const classes = useStyles();
 
     return (
-        <div>
+        <div align="center">
             <Sidebar/>
 
             <TableContainer component={Paper} className={classes.tableContainer}>
@@ -84,39 +84,39 @@ const AdminDashBoard = () => {
                 </TableContainer>  
 
                 <TableContainer component={Paper} className={classes.tableContainer}>
-                <Table className={classes.table} aria-label="simple table">
-                    <TableHead>
-                    <TableRow className={classes.tableHeader}>
-                        <TableCell style={{color: 'white'}}>Two Week Out</TableCell>
-                        <TableCell className={classes.cellStyle} align="right">Edit</TableCell>
-                        <TableCell className={classes.cellStyle} align="right">Time Schedule</TableCell>
-                        <TableCell className={classes.cellStyle} align="right">Attendance</TableCell>
-                        <TableCell className={classes.cellStyle} align="right">Status</TableCell>
-                    </TableRow>
-                    </TableHead>
-                    <TableBody>
-                    {days.map((day) => (
-                        <TableRow key={day}>
-                        <TableCell component="th" scope="row">
-                            {day}
-                        </TableCell>
-                        <TableCell align="right">
-                            <SettingsIcon/>
-                        </TableCell>
-                        <TableCell align="right">{12}pm => {8}pm</TableCell>
-                        <TableCell align="right">Pending</TableCell>
-                        <TableCell align="right">Scheduled</TableCell>
+                    <Table className={classes.table} aria-label="simple table">
+                        <TableHead>
+                        <TableRow className={classes.tableHeader}>
+                            <TableCell style={{color: 'white'}}>Two Week Out</TableCell>
+                            <TableCell className={classes.cellStyle} align="right">Edit</TableCell>
+                            <TableCell className={classes.cellStyle} align="right">Time Schedule</TableCell>
+                            <TableCell className={classes.cellStyle} align="right">Attendance</TableCell>
+                            <TableCell className={classes.cellStyle} align="right">Status</TableCell>
                         </TableRow>
-                    ))}
-                        <TableCell component="th" scope="row">
-                            Stats
-                        </TableCell>
-                        <TableCell align="right"></TableCell>
-                        <TableCell align="right">40hrs</TableCell>
-                        <TableCell align="right">100%</TableCell>
-                        <TableCell align="right">$600 Earned</TableCell>
-                    </TableBody>
-                </Table>
+                        </TableHead>
+                        <TableBody>
+                        {days.map((day) => (
+                            <TableRow key={day}>
+                            <TableCell component="th" scope="row">
+                                {day}
+                            </TableCell>
+                            <TableCell align="right">
+                                <SettingsIcon/>
+                            </TableCell>
+                            <TableCell align="right">{12}pm  {8}pm</TableCell>
+                            <TableCell align="right">Pending</TableCell>
+                            <TableCell align="right">Scheduled</TableCell>
+                            </TableRow>
+                        ))}
+                            <TableCell component="th" scope="row">
+                                Stats
+                            </TableCell>
+                            <TableCell align="right"></TableCell>
+                            <TableCell align="right">40hrs</TableCell>
+                            <TableCell align="right">100%</TableCell>
+                            <TableCell align="right">$600 Earned</TableCell>
+                        </TableBody>
+                    </Table>
                 </TableContainer>          
             
         </div>

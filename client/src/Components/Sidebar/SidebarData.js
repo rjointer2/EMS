@@ -26,7 +26,7 @@ export const SidebarData = [
      {
         title: "Shifts",
         icon: <BusinessIcon />,
-        link: "/Shifts", 
+        link: "/shifts", 
      },
      {
         title: "Chat Room",

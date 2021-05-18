@@ -5,7 +5,7 @@ import HomeScreen from '../Screens/HomeScreen/HomeScreen';
 import EditProfile from '../Screens/EditProfile/EditProfile';
 import Schedule from '../Screens/Schedule/Schedule'
 import ChatRoom from '../Screens/ChatRoom/ChatRoom';
-import Tasks from '../Screens/Tasks/Task';
+import Shifts from '../Screens/Shifts/Shifts';
 import LogIn from '../Screens/LoginScreens/Login/LogIn';
 import SignUp from '../Screens/LoginScreens/SignUp/SignUp';
 import ForgotLogin from '../Screens/LoginScreens/ForgotLogin/ForgotLogin';
@@ -42,7 +42,7 @@ const App = () => {
             <Route exact path="/chatrooms" component={ChatRoom}/>
           </Switch>
           <Switch>
-            <Route exact path="/tasks" component={Tasks}/>
+            <Route exact path="/shifts" component={Shifts}/>
           </Switch>
           <Switch>
             <Route exact path="/" component={LogIn}/>
