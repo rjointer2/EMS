@@ -5,7 +5,7 @@ const route = require('express').Router();
 
 // API Routes
 
-route.use('/users', require('./app/Users'));
+route.use('/users', require('./app/users'));
 route.use('/chatRooms', require('./app/chatRooms'));
 
 // Application Routes
@@ -13,4 +13,4 @@ route.use('/chatRooms', require('./app/chatRooms'));
 
 exports = module.exports = {
     route
-}
+};
