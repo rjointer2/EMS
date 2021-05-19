@@ -68,5 +68,5 @@ route.put('/:id/updateProperty', (req, res) => {
 })
 
 
-exports = module.exports = route
+exports = module.exports = route;
 
