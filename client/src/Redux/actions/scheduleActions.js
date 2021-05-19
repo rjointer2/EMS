@@ -10,7 +10,7 @@ import * as actionTypes from '../constants/scheduleConstants';
 // then dispatch this action to our reducor to give a constant 
 // update the state
 
-const getScheduleRequest = () => async (dispatch) => {
+export const getScheduleRequest = () => async (dispatch) => {
 
     try {
 

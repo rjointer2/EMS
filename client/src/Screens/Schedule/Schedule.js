@@ -11,6 +11,11 @@ import TableRow from '@material-ui/core/TableRow';
 import Paper from '@material-ui/core/Paper';
 import SettingsIcon from '@material-ui/icons/Settings';
 
+// Actions 
+
+import { getScheduleRequest as getSchedule } from '../../Redux/actions/scheduleActions'
+import { useDispatch, useSelector } from 'react-redux';
+
 
 const useStyles = makeStyles((theme) => ({
     table: {
@@ -38,7 +43,14 @@ console.log(days)
 
 const AdminDashBoard = () => {
 
-    
+    const dispatch = useDispatch();
+
+    const getScheduleRequest = useSelector( state => state.getScheduleRequest );
+    const { err, fetching, getSchedule } = getScheduleRequest;
+
+    const schedule = dispatch(getSchedule())
+
+    console.log(schedule)
 
     const classes = useStyles();
 

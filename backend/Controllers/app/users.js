@@ -186,9 +186,22 @@ route.delete('/:id', (req, res) => {
 
 // to update user
 
-route.put('/:id/updateProperty', (req, res) => {
+route.put('/schedule/:id', (req, res) => {
+    if( req.params.id === null || undefined ) {
+        res.status(404).json('User must enter info here')
+    }
 
-    if( req.params.updateProperty === null || undefined || ' ' ) {
+    User.update({ schedule: req.body.schedule }, {where: { id: req.params.id } })
+        res.status(201).json('updated schedule');
+
+});
+
+
+
+
+/* route.put('/:id/updateProperty', (req, res) => {
+
+    if( req.params.updateProperty === null || undefined ) {
         res.status(404).json('User must enter info here')
     }
 
@@ -212,8 +225,13 @@ route.put('/:id/updateProperty', (req, res) => {
         res.status(201).json('updated password')
     }
 
-});
+    if( req.params.updateProperty === 'schedule') {
+        User.update({ schedule: req.body.schedule }, {where: { id: req.params.id } })
+        res.status(201).json('updated schedule')
+    }
 
+});
+ */
 
 
 exports = module.exports = route

@@ -38,6 +38,7 @@ export const addToShiftCart = (id) => async (dispatch, getState) => {
 
 export const removeShiftFromCart = (id) => (dispatch) => {
 
+
     dispatch({
         // telling the reducer this action 
         type: actionTypes.REMOVE_TO_SCHEDULE_CART,
@@ -46,7 +47,20 @@ export const removeShiftFromCart = (id) => (dispatch) => {
     });
 
     // we will rewrite the key in the browser's with the new state array
-    localStorage.setItem('_emsShiftCart', JSON.stringify(getState().shift))
+    localStorage.setItem('_emsShiftCart', JSON.stringify(getState().shift).shiftItems)
+
+}
+
+
+export const sendRequestToAdmin = () => async (dispatch) => {
+
+    const request = localStorage.getItem('_emsShiftCart')
+
+    dispatch({
+        type: actionTypes.SEND_SCHEDULE_CART_TO_ADMIN,
+        // we will keep the payload as a string for the database
+        payload: request
+    })
 
 }
 
