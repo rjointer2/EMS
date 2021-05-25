@@ -10,7 +10,7 @@ import LogIn from '../Screens/LoginScreens/Login/LogIn';
 import SignUp from '../Screens/LoginScreens/SignUp/SignUp';
 import ForgotLogin from '../Screens/LoginScreens/ForgotLogin/ForgotLogin';
 import ChangeLogin from '../Screens/LoginScreens/ChangeLogin/ChangeLogin';
-
+import Footer from '../Components/Footer/Footer.js'
 
 // Global Styles
 
@@ -35,9 +35,9 @@ const App = () => {
           <Switch>
             <Route exact path="/editprofile" component={EditProfile}/>
           </Switch>
-          <Switch>
+          {/* <Switch>
             <Route exact path="/schedule" component={Schedule}/>
-          </Switch>
+          </Switch> */}
           <Switch>
             <Route exact path="/chatrooms" component={ChatRoom}/>
           </Switch>
@@ -58,6 +58,7 @@ const App = () => {
           </Switch>
      </Router>
 
+<Footer />
     </div>
   );
 }
