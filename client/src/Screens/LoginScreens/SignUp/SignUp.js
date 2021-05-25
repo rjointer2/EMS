@@ -43,8 +43,8 @@ const SignUp = () => {
                 </Grid>
                 <Grid>
                     <TextField label="Username" placeholder="User Name" style={signUpInputField} required />
-                    <TextField label="Password" placeholder="Password" style={signUpInputField} required />
-                    <TextField label="Confrim Password" placeholder=" Confirm Password" style={signUpInputField} required />
+                    <TextField label="Password" type="password" placeholder="Password" style={signUpInputField} required />
+                    <TextField label="Confrim Password" type="password" placeholder=" Confirm Password" style={signUpInputField} required />
                 </Grid>
                 <Grid>
                     <TextField label="Department" placeholder="Add Department Here..." style={signUpInputField} required />
