@@ -177,7 +177,7 @@ Node, ReactJS, Redux, React Redux, React Thunk Middleware, Material UI, Express,
                             <Card className={classes.root}>
                                 <CardContent>
                                     <Typography className={classes.title} color="textSecondary" gutterBottom>
-                                    Lorem Ispum
+                                    JWT Authentication - Secure Your React and Redux App 
                                     </Typography>
                                     <Typography variant="h5" component="h2">
                                     Consectueur elit
@@ -186,7 +186,8 @@ Node, ReactJS, Redux, React Redux, React Thunk Middleware, Material UI, Express,
                                     Lorem...
                                     </Typography>
                                     <Typography variant="body2" component="p">
-                                    Massa enim nec dui nunc mattis enim ut tellus. Ac tortor dignissim convallis aenean et.  
+                                Redux is a state container for JavaScript applications by Dan Abramov that lets us have an expectable unidirectional data flow. It offers some benefits over other libraries like Flux, but works in similar ways. In this we implemented how to add JWT authentication to a Redux app. 
+
                                     <br />
                                     
                                     </Typography>
