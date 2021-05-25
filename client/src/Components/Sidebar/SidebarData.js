@@ -13,11 +13,11 @@ export const SidebarData = [
        icon: <HomeIcon />,
        link: "/home", 
     },
-    {
-        title: "Schedule",
-        icon: <DashboardIcon />,
-        link: "/schedule", 
-     },
+   //  {
+   //      title: "Schedule",
+   //      icon: <DashboardIcon />,
+   //      link: "/schedule", 
+   //   },
      {
         title: "Edit Profile",
         icon: <EventIcon />,
