@@ -150,7 +150,7 @@ Node, ReactJS, Redux, React Redux, React Thunk Middleware, Material UI, Express,
                             <Card className={classes.root}>
                                 <CardContent>
                                     <Typography className={classes.title} color="textSecondary" gutterBottom>
-                                    Lorem Ispum
+                                    Edit Profile
                                     </Typography>
                                     <Typography variant="h5" component="h2">
                                     Consectueur elit
@@ -159,7 +159,8 @@ Node, ReactJS, Redux, React Redux, React Thunk Middleware, Material UI, Express,
                                     Lorem...
                                     </Typography>
                                     <Typography variant="body2" component="p">
-                                    Massa enim nec dui nunc mattis enim ut tellus. Ac tortor dignissim convallis aenean et.  
+                                    Edit and add your employees and manage their information to make sure their profiles are organized to fit your needs. In addition to their contact information, your employees’ profiles contain their assigned schedules, positions, salaries and wage information.
+.  
                                     <br />
                                     
                                     </Typography>
