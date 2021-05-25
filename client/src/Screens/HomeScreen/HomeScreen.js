@@ -125,7 +125,7 @@ Node, ReactJS, Redux, React Redux, React Thunk Middleware, Material UI, Express,
                         <Card className={classes.root}>
                             <CardContent>
                                 <Typography className={classes.title} color="textSecondary" gutterBottom>
-                                Lorem Ispum
+                                Shift Management
                                 </Typography>
                                 <Typography variant="h5" component="h2">
                                 Consectueur elit
@@ -134,7 +134,7 @@ Node, ReactJS, Redux, React Redux, React Thunk Middleware, Material UI, Express,
                                 Lorem...
                                 </Typography>
                                 <Typography variant="body2" component="p">
-                                Massa enim nec dui nunc mattis enim ut tellus. Ac tortor dignissim convallis aenean et.  
+                                In many organizations, it's often a difficult and thankless job to schedule employees in their various shifts. The individual in charge of this task needs to think long and hard before placing workers into their various time slots. When done successfully, productivity is maximized and sales are not overrun by labor costs. Week after week, month and month, this task needs to be repeated again and again. This can become a tedious and error-prone process if done manually using paper and pencil or a spreadsheet.  
                                 <br />
                                 
                                 </Typography>
