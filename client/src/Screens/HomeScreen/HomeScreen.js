@@ -85,11 +85,12 @@ const HomeScreen = () => {
                 <Container maxWidth='lg' style={{paddingTop: '3em'}} >
 
                     <Typography variant='h4' style={{paddingBottom: '.8em'}}>
-                        What's New
+                        Abstract of the EMS App
                     </Typography>
 
                     <Typography style={{paddingBottom: '2em', fontSize: '.8em'}}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    We help small businesses improve their business Return on Investment (ROI) and employee productivity by providing world-class Employee Management System App to manage their employees with in efficient and effective manner. Obviously, managing employees’ information manually poses numerous challenges especially their shift management, edit profile management etc. To solve that problem every organization needs a fully computerized employee management system using new web technologies. Keeping in mind the above real world company challenges we a small team of 2 students only developed an app by using the following advanced web technologies. 
+Node, ReactJS, Redux, React Redux, React Thunk Middleware, Material UI, Express, Express-Session, JWT, BcryptJS, MySQL and Sequelize ORM, ClearDB.
                     </Typography>
 
                     {/* Stories */}
